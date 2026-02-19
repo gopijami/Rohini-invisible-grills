@@ -1,0 +1,62 @@
+{
+  "_app.tsx -> ../components/FloatingContact": {
+    "id": "_app.tsx -> ../components/FloatingContact",
+    "files": [
+      "static/chunks/components_FloatingContact_tsx.js"
+    ]
+  },
+  "index.tsx -> ../components/ButtonCards": {
+    "id": "index.tsx -> ../components/ButtonCards",
+    "files": [
+      "static/chunks/components_ButtonCards_tsx.js"
+    ]
+  },
+  "index.tsx -> ../components/Carousel": {
+    "id": "index.tsx -> ../components/Carousel",
+    "files": [
+      "static/chunks/components_Carousel_tsx.js"
+    ]
+  },
+  "index.tsx -> ../components/Clients": {
+    "id": "index.tsx -> ../components/Clients",
+    "files": [
+      "static/chunks/components_Clients_tsx.js"
+    ]
+  },
+  "index.tsx -> ../components/ContactForm": {
+    "id": "index.tsx -> ../components/ContactForm",
+    "files": [
+      "static/chunks/components_ContactForm_tsx.js"
+    ]
+  },
+  "index.tsx -> ../components/Footer": {
+    "id": "index.tsx -> ../components/Footer",
+    "files": [
+      "static/chunks/components_Footer_tsx.js"
+    ]
+  },
+  "index.tsx -> ../components/Header": {
+    "id": "index.tsx -> ../components/Header",
+    "files": [
+      "static/chunks/components_Header_tsx.js"
+    ]
+  },
+  "index.tsx -> ../components/MobileRibbon": {
+    "id": "index.tsx -> ../components/MobileRibbon",
+    "files": [
+      "static/chunks/components_MobileRibbon_tsx.js"
+    ]
+  },
+  "index.tsx -> ../components/Services": {
+    "id": "index.tsx -> ../components/Services",
+    "files": [
+      "static/chunks/components_Services_tsx.js"
+    ]
+  },
+  "index.tsx -> ../components/Testimonials": {
+    "id": "index.tsx -> ../components/Testimonials",
+    "files": [
+      "static/chunks/components_Testimonials_tsx.js"
+    ]
+  }
+}
