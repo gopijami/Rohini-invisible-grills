@@ -3,7 +3,7 @@
 
 # next.js build output
 /.next/
-# /out/
+/out/
 
 # production build
 /build
