@@ -228,8 +228,9 @@ export default function ContactForm(){
     src={heroImages[2].src}
     alt={heroImages[2].alt}
     fill
-    className="object-cover rounded-lg"
     priority
+    className="object-cover rounded-lg"
+    
   />
 
   {/* Dark Gradient Overlay */}

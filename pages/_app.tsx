@@ -46,7 +46,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="preload" as="image" href="/images/client-adhitya.svg" />
         <link rel="preload" as="image" href="/Rohini_logo.webp" />
         <link rel="preload" as="image" href="/images/anti-bird-invisible-grills.webp" />
-        <link rel="preload" as="image" href="/images/invisible-grill-for-balcony.webp" />
+        <link rel="preload" as="image" href="/images/invisible-grill-for-balcony.webp"/>
         <link rel="preload" as="image" href="/images/invisible-grill-2.webp" />
         <link rel="preload" as="image" href="/images/apartment-balcony-invisible-grills-near-me-in-hyderabad.webp" />
         <link rel="preload" as="image" href="/images/children-safety-invisible-grills-in-hyderabad.webp" />

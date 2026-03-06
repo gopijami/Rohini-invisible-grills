@@ -42,8 +42,10 @@ export default function Carousel(){
             src={item.src}
             alt={item.alt}
             fill
+            sizes="100vw"
             className="object-cover"
             priority={i === 0}
+            fetchPriority={i === 0?"high":"auto"}
           />
 
           {/* Caption Overlay */}
@@ -84,7 +86,7 @@ export default function Carousel(){
         <button
           key={i}
           onClick={() => setIndex(i)}
-          className={`w-2 h-2 rounded-full ${
+          className={`w-6 h-6 rounded-full ${
             i === index ? "bg-white" : "bg-white/50"
           }`}
           aria-label={`Go to slide ${i + 1}`}

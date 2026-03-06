@@ -3,12 +3,12 @@ export default function Footer(){
     <footer className="bg-gray-50 border-t mt-8 p-6">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between gap-4">
         <div>
-          <h4 className="font-semibold">Rohini Invisible Grills</h4>
+          <h3 className="font-semibold">Rohini Invisible Grills</h3>
           <p className="text-sm text-gray-600">Address: 123, Example Street, Hyderabad</p>
           <p className="text-sm text-gray-600">Phone: +91 99 0000 0000</p>
         </div>
         <div>
-          <h5 className="font-medium">Services</h5>
+          <h4 className="font-medium">Services</h4>
           <ul className="text-sm text-gray-600">
             <li>Invisible Grills</li>
             <li>Balcony Safety Nets</li>
