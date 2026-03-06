@@ -1,23 +1,20 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { services } from "./constants/services"
 import { Briefcase } from "lucide-react"
 import Link from "next/link"
 import { hyderabadLocations } from "./constants/locations"
-import { useRouter } from "next/router"
+import { usePathname } from "next/navigation"
 
 export default function DropdownClient() {
   const [open, setOpen] = useState(false)
-  const router = useRouter()
+  const pathname = usePathname()
 
   // ✅ close dropdown after navigation
   useEffect(() => {
-    const handleRoute = () => setOpen(false)
-
-    router.events.on("routeChangeStart", handleRoute)
-    return () => router.events.off("routeChangeStart", handleRoute)
-  }, [router])
+    setOpen(false)
+  }, [pathname])
 
   return (
     <div

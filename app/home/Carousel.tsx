@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
@@ -63,11 +64,7 @@ export default function Carousel(){
                 Premium Invisible Grills & Safety Nets in Hyderabad
               </p>
               <button 
-              // onClick={() => {
-              //     const element = document.getElementById("quote")
-              //     element?.scrollIntoView({ behavior: "smooth" })
-              //   }} 
-                className="mt-4 px-4 py-2 bg-primary rounded-md text-sm font-semibold hover:scale-105 transition">
+                className="mt-4 px-4 py-2 border-2 border-[#C9A227] text-[#C9A227] rounded-mdsm font-semibold hover:scale-105 transition">
                  <a href="tel:+919900000000" className="font-medium">
               Call Now
             </a>

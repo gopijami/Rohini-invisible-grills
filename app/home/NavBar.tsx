@@ -1,16 +1,12 @@
-import react,{ useEffect, useState } from "react"
+'use client'
+import react,{ useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import dynamic from "next/dynamic"
-import { services } from "./constants/services"
-import { hyderabadLocations } from "./constants/locations"
 import {
   Home,
   Phone,
   Info,
-  Briefcase,
-  ChevronDown,
-  Menu
 } from "lucide-react"
 import { memo } from "react"
 
@@ -26,7 +22,7 @@ const DropdownClient = dynamic(() => import('./Dropdown.client'), {
 
 const Header: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false)
-  // const [showTopBar, setShowTopBar] = useState(true)
+  const [showTopBar, setShowTopBar] = useState(true)
   // const [lastScrollY, setLastScrollY] = useState(0)
 
   // useEffect(() => {
