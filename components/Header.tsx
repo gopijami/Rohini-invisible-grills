@@ -1,45 +1,149 @@
-import { useState } from 'react'
+import react,{ useEffect, useState } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import dynamic from "next/dynamic"
+import { services } from "./constants/services"
+import { hyderabadLocations } from "./constants/locations"
+import {
+  Home,
+  Phone,
+  Info,
+  Briefcase,
+  ChevronDown,
+  Menu
+} from "lucide-react"
+import { memo } from "react"
 
-const Menu = ({ open, onClose }: { open: boolean; onClose: () => void }) => {
-  return (
-    <div className={`fixed top-0 left-0 h-full bg-white shadow-lg transition-transform z-40 ${open ? 'translate-x-0' : '-translate-x-full'} w-72`}> 
-      <div className="p-6">
-        <button className="mb-4 text-sm text-gray-500" onClick={onClose}>Close</button>
-        <nav className="flex flex-col gap-3 mt-4">
-          <a className="py-2 px-3 rounded hover:bg-gray-100">Invisible Grills</a>
-          <a className="py-2 px-3 rounded hover:bg-gray-100">Invisible Grills in Hyderabad</a>
-          <a className="py-2 px-3 rounded hover:bg-gray-100">Balcony Safety Nets</a>
-          <a className="py-2 px-3 rounded hover:bg-gray-100">Anti Bird Nets</a>
-          <a className="py-2 px-3 rounded hover:bg-gray-100">Sports Nets</a>
-          <a className="py-2 px-3 rounded hover:bg-gray-100">All kinds of Sports Nets</a>
-          <a className="py-2 px-3 rounded hover:bg-gray-100">Duct Area Safety Nets</a>
-        </nav>
-      </div>
-    </div>
-  )
-}
 
-export default function Header() {
-  const [open, setOpen] = useState(false)
+const MenuClient  = dynamic(() => import('./Menu.client'), {
+  ssr: false,
+})
+
+const DropdownClient = dynamic(() => import('./Dropdown.client'), {
+  ssr: false,
+})
+
+
+const Header: React.FC = () => {
+  const [open, setOpen] = useState<boolean>(false)
+  // const [showTopBar, setShowTopBar] = useState(true)
+  // const [lastScrollY, setLastScrollY] = useState(0)
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollY = window.scrollY
+
+  //     if (currentScrollY > lastScrollY && currentScrollY > 50) {
+  //       // scrolling down
+  //       setShowTopBar(false)
+  //     } else {
+  //       // scrolling up
+  //       setShowTopBar(true)
+  //     }
+
+  //     setLastScrollY(currentScrollY)
+  //   }
+
+  //   window.addEventListener("scroll", handleScroll)
+  //   return () => window.removeEventListener("scroll", handleScroll)
+  // }, [lastScrollY])
+
   return (
-    <header className="flex items-center justify-between px-6 py-4 bg-white shadow-sm">
-      <div className="flex items-center gap-3">
-        {/* <div className="w-12 h-12 bg-primary text-white rounded flex items-center justify-center font-bold">RI</div> */}
-        <img src="Rohini_logo.png" alt="Rohini Invisible Grills" className=" w-auto h-20" loading="eager" />
-          <div>
-            <h1 className="text-sm sm:text-xl md:text-2xl font-bold text-primary leading-tight">Rohini Invisible Grills</h1>
-            <p className="text-xs sm:text-sm text-accent2 font-medium">Safety nets distribution</p>
+    <>
+      {/* Fixed Header Wrapper */}
+      <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+        
+        {/* Main Header */}
+        <header className="flex items-center justify-between px-6 pt-4 pb-0">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/Rohini_logo.webp"
+              alt="Rohini Invisible Grills"
+              width={120}
+              height={95}
+              priority
+              className="h-16 sm:h-22 w-auto"
+            />
+
+            <div>
+              <h1 className="text-sm sm:text-xl md:text-2xl font-bold text-primary">
+                Rohini Invisible Grills
+              </h1>
+              <p className="text-xs sm:text-sm text-gray-600 font-medium">
+                Safety Nets Distribution
+              </p>
+            </div>
           </div>
+
+          <div className="hidden lg:flex items-center justify-between gap-4">
+            <div className="hidden lg:flex">
+             <div className=" flex items-center">
+              <Link href="/" className="text-primary flex items-center text-lg md:text-sm lg:text-xl font-semibold px-4 py-2">
+                 <Home size={22} className="text-orange-500 mr-2 md:text-sm lg:text-xl" />
+                    Home
+                  </Link>
+
+                <DropdownClient />
+
+                  <Link href="/contact" className="text-primary md:text-sm lg:text-xl flex items-center text-lg font-semibold px-4 py-2">
+                 <Phone size={22} className="text-orange-500 mr-2 md:text-sm lg:text-xl" />
+                    Contact Us
+                  </Link>
+
+                   <Link href="/about" className="text-primary md:text-sm lg:text-xl flex items-center text-lg font-semibold px-4 py-2">
+                 <Info size={22} className="text-orange-500 mr-2 md:text-sm lg:text-xl" />
+                    About Us
+                  </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className=" flex items-center gap-4">
+            <div className="hidden sm:inline-block">
+             <div className=" flex items-center">
+              
+                <button onClick={() => {
+                      const element = document.getElementById("quote")
+                      element?.scrollIntoView({ behavior: "smooth" })
+                    }}  className="hidden sm:inline-block text-sm btn-accent md:text-sm lg:text-xl text-white px-4 py-2 md:px-2 md:py-1 lg:px-4 lg:py-2 rounded hover:opacity-90 transition">
+                  Request Quote 
+                </button>
+            </div> 
+          </div>
+          <div className="block lg:hidden">
+            <button
+              aria-label="menu"
+              onClick={() => setOpen(!open)}
+              className="p-2 rounded-md"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M4 6h16M4 12h16M4 18h16"
+                  stroke="#111827"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button></div>
+          </div>
+        </header>
+
+       
       </div>
 
-      <div className="flex items-center gap-4">
-        <button className="hidden sm:inline-block text-sm btn-accent px-3 py-1 rounded">Request Quote</button>
-        <button aria-label="menu" onClick={() => setOpen(true)} className="p-2 rounded-md focus:outline-none">
-          <svg width="29" height="29" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="#111827" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-        </button>
-      </div>
-
-      <Menu open={open} onClose={() => setOpen(false)} />
-    </header>
+      {/* Important: Prevent content hiding under fixed header */}
+      <div className="pt-20" />
+      <div className="block lg:hidden">
+      <MenuClient open={open} onClose={() => setOpen(false)} />
+        </div>
+    </>
   )
 }
+
+export default memo(Header)
