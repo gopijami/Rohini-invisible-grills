@@ -59,7 +59,7 @@ export default function Home() {
     <>
       {/* <NavBar />
       <ContactDetailsBar /> */}
-    <main className="px-4 py-6 sm:p-6">
+    <main className="px-4 pb-6 pt-[1px] md:pt-[3px] sm:p-6">
          
       <Carousel />
       <ButtonCards />

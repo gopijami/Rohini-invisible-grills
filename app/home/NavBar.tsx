@@ -9,6 +9,9 @@ import {
   Info,
 } from "lucide-react"
 import { memo } from "react"
+import { Inter } from "next/font/google"
+
+const inter = Inter({ subsets: ["latin"] })
 
 
 const MenuClient  = dynamic(() => import('./Menu.client'), {
@@ -50,8 +53,8 @@ const Header: React.FC = () => {
       <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
         
         {/* Main Header */}
-        <header className="flex items-center justify-between px-6 pt-4 pb-0">
-          <div className="flex items-center gap-3">
+        <header className="bg-gradient-to-br from-white via-orange-50 to-gray-100 flex items-center  justify-between px-6 pt-4 pb-0">
+          <div className="flex  items-center gap-3">
             <Image
               src="/Rohini_logo.webp"
               alt="Rohini Invisible Grills"
@@ -62,16 +65,25 @@ const Header: React.FC = () => {
             />
 
             <div>
-              <h1 className="text-sm sm:text-xl md:text-2xl font-bold text-primary">
-                Rohini Invisible Grills
-              </h1>
-              <p className="text-xs sm:text-sm text-gray-600 font-medium">
+             <h1 className="relative text-sm sm:text-lg md:text-xl font-extrabold tracking-wider text-gray-800">
+  <span className="absolute inset-0 bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-500 bg-clip-text text-transparent filter blur-sm opacity-70"></span>
+  <span className="relative bg-gradient-to-r from-yellow-700 via-yellow-500 to-yellow-400 bg-clip-text text-transparent">
+    Rohini Invisible Grills
+  </span>
+</h1>
+              <div className="flex items-center gap-2">
+              <span className="flex-1 h-[1px] bg-gray-400"></span>
+
+              <p className="text-[10px] text-gray-600 md:font-medium whitespace-nowrap">
                 Safety Nets Distribution
               </p>
+
+              <span className="flex-1 h-[1px] bg-gray-400"></span>
+            </div>
             </div>
           </div>
 
-          <div className="hidden lg:flex items-center justify-between gap-4">
+          {/* <nav className="hidden lg:flex items-center justify-between gap-4">
             <div className="hidden lg:flex">
              <div className=" flex items-center">
               <Link href="/" className="text-primary flex items-center text-lg md:text-sm lg:text-xl font-semibold px-4 py-2">
@@ -92,7 +104,38 @@ const Header: React.FC = () => {
                   </Link>
               </div>
             </div>
-          </div>
+          </nav> */}
+          <nav className="hidden lg:flex items-center justify-between">
+  <div className="flex items-center space-x-2">
+
+    <Link
+      href="/"
+      className="relative px-4 py-2 text-base font-medium text-gray-700 transition-all duration-300 hover:text-orange-500 group"
+    >
+      Home
+      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+    </Link>
+
+    <DropdownClient />
+
+    <Link
+      href="/contact"
+      className="relative px-4 py-2 text-base font-medium text-gray-700 transition-all duration-300 hover:text-orange-500 group"
+    >
+      Contact Us
+      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+    </Link>
+
+    <Link
+      href="/about"
+      className="relative px-4 py-2 text-base font-medium text-gray-700 transition-all duration-300 hover:text-orange-500 group"
+    >
+      About Us
+      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+    </Link>
+
+  </div>
+</nav>
 
           <div className=" flex items-center gap-4">
             <div className="hidden sm:inline-block">

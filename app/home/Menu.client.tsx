@@ -39,9 +39,9 @@ type MenuProps = {
        {/* Metallic Gold Header */}
         <div className="border-b border-amber-200 bg-gradient-to-r from-amber-50 via-yellow-50 to-white">
           <div className="pl-6 pr-6 pt-5 flex justify-between items-center">
-            <h1 className="text-lg font-semibold bg-gradient-to-r from-amber-600 to-yellow-500 bg-clip-text text-transparent">
+            <h2 className="text-lg font-semibold bg-gradient-to-r from-amber-600 to-yellow-500 bg-clip-text text-transparent">
               Rohini Invisible Grills
-            </h1>
+            </h2>
 
             <button
               onClick={onClose}

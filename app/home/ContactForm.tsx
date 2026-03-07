@@ -73,11 +73,11 @@ export default function ContactForm(){
   }
 
   return (
-  <div id="quote" className='flex gap-4 px-4 bg-orange-100 py-6 rounded-lg shadow-sm flex-col lg:flex-row'>
+  <div id="quote" className='flex gap-4 w-full px-4 bg-orange-100 py-6 rounded-lg shadow-sm flex-col lg:flex-row'>
   
 
     <div className="block sm:hidden bg-white border rounded-lg p-6 shadow-sm">
-      <h3 className="text-xl font-semibold mb-3">Contact Us</h3>
+      <h2 className="text-xl font-semibold mb-3">Contact Us</h2>
       <form className="grid grid-cols-1 sm:grid-cols-2 gap-4" onSubmit={handleSubmit}>
         <input 
           name="name" 

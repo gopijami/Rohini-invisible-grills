@@ -80,10 +80,17 @@ function ButtonCardsInner({ images = defaultImages }: { images?: ServiceItem[] }
   <span className="block w-24 h-1 bg-orange-500 mx-auto mt-3 rounded"></span>
 </h2> */}
 
-<h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-800 mt-10 mb-10">
+{/* <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-800 mt-10 mb-10">
   Our Products & Best Deals
   <span className="block w-20 h-1 bg-orange-500 mx-auto mt-3 rounded"></span>
-</h2>
+</h2> */}
+<div className="text-center mt-12 mb-10">
+  <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-800">
+    Our Products & Best Deals
+  </h1>
+
+  <div className="w-28 h-1 bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 mx-auto mt-4 rounded-full"></div>
+</div>
       <div
         ref={scrollerRef}
         className="overflow-x-auto thin-scrollbar py-2 touch-pan-x"
@@ -98,7 +105,7 @@ function ButtonCardsInner({ images = defaultImages }: { images?: ServiceItem[] }
               <div
                 key={`${items.image}-${i}`}
                 aria-hidden={!isOriginal}
-                className={`min-w-[160px] sm:min-w-[220px] md:min-w-[260px] bg-white border rounded-lg p-0 shadow-soft transform transition-transform hover:scale-105 overflow-hidden ${
+                className={`min-w-[180px] sm:min-w-[220px] md:min-w-[260px] bg-white border rounded-lg p-0 shadow-soft transform transition-transform hover:scale-105 overflow-hidden ${
                   isOriginal ? "snap-start" : ""
                 }`}
               >

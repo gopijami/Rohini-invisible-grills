@@ -1,7 +1,24 @@
 import dynamic from "next/dynamic";
 import "./globals.css";
 import type { Metadata } from "next";
-import { HeaderSkeleton } from "./home/LoadingSkeletons";
+import { HeaderSkeleton,FloatingContactSkeleton } from "./home/LoadingSkeletons";
+import { Inter, Poppins } from 'next/font/google'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400','500','600','700'],
+  display: 'swap',
+})
+
+const FloatingContact = dynamic(() => import("./home/FloatingContact"), {
+  loading: () => <FloatingContactSkeleton />,
+  ssr: false,
+});
 
 const NavBar = dynamic(() => import("./home/NavBar"), {
     loading: () => <HeaderSkeleton />,
@@ -63,7 +80,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-gray-800 antialiased">
+      <body className={`${inter.className} bg-white`}>
         <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
@@ -83,9 +100,14 @@ export default function RootLayout({
     }),
   }}
 />
-<NavBar />
+<div className={poppins.className}>
+    
+        <NavBar />
         <ContactDetailsBar />
         {children}
+        <FloatingContact />
+        
+        </div>
       </body>
     </html>
   );

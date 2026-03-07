@@ -83,7 +83,7 @@ export default function Services(){
                       Call
                     </a>
 
-                    <a href="https://wa.me/919900000000" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-2 bg-green-500 text-white rounded-md text-sm">
+                    <a href="https://wa.me/919900000000" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-2 bg-green-700 text-white rounded-md text-sm">
                       WhatsApp
                     </a>
                   </div>

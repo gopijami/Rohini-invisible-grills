@@ -18,19 +18,21 @@ export default function DropdownClient() {
 
   return (
     <div
-      className="relative"
+      className="relative "
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
       {/* Button */}
-      <button className="text-primary font-semibold flex md:text-sm lg:text-xl items-center px-4 py-2 text-lg hover:text-indigo-600 transition">
-        <Briefcase size={22} className="text-orange-500 mr-2 md:text-sm lg:text-xl" />
+      <button className="relative px-4 py-2 text-base font-medium text-gray-700 transition-all duration-300 hover:text-orange-500 group">
+        {/* <Briefcase size={22} className="text-orange-500 mr-2 md:text-sm lg:text-xl" /> */}
         Services
+      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+
       </button>
 
       {/* First Dropdown */}
       <div
-        className={`absolute left-0 mt-3 w-72 bg-white shadow-xl rounded-xl
+        className={`absolute left-0 mt-3 w-72 bg-white shadow-xl bg-gradient-to-r from-amber-50 via-yellow-50 to-white
         transition-all duration-300 z-50
         ${
           open
@@ -59,7 +61,7 @@ function ServiceItem({ service, closeMenu }: any) {
 
   return (
     <div
-      className="relative"
+      className="relative bg-gradient-to-r from-amber-50 via-yellow-50 to-white"
       onMouseEnter={() => setSubOpen(true)}
       onMouseLeave={() => setSubOpen(false)}
     >
@@ -67,14 +69,15 @@ function ServiceItem({ service, closeMenu }: any) {
       <Link
         href={`/services/${service.slug}`}
         onClick={closeMenu}
-        className="block px-5 py-3 hover:bg-indigo-50 font-medium text-gray-700"
+        className="block relative  px-5 py-3 text-base font-medium text-gray-700 transition-all duration-300 hover:text-orange-500 group"
       >
         {service.title}
+      <span className="absolute left-0 -bottom-1 h-[1px] w-0 bg-orange-500 transition-all z-10 duration-300 group-hover:w-full"></span>
       </Link>
 
       {/* Second Dropdown */}
       <div
-        className={`absolute left-full top-0 w-80 bg-white shadow-xl rounded-xl
+        className={`absolute left-full top-0 w-80 bg-white shadow-xl bg-gradient-to-r from-amber-50 via-yellow-50 to-white
         max-h-[57vh] overflow-y-auto transition-all duration-300
         ${
           subOpen
@@ -87,7 +90,7 @@ function ServiceItem({ service, closeMenu }: any) {
             key={`${service.slug}-${location}`}
             href={`/services/${service.slug}/${location}`}
             onClick={closeMenu}
-            className="block px-5 py-3 hover:bg-indigo-50 text-gray-700"
+            className="block px-5 py-3 hover:bg-indigo-50 text-gray-700 hover:text-orange-500 transition-colors duration-300"
           >
             {service.title} in {location}
           </Link>
