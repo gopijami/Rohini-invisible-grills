@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import "./globals.css";
 import type { Metadata } from "next";
-import { HeaderSkeleton,FloatingContactSkeleton } from "./home/LoadingSkeletons";
+import { HeaderSkeleton,FloatingContactSkeleton } from "./components/LoadingSkeletons";
 import { Inter, Poppins } from 'next/font/google'
 
 const inter = Inter({
@@ -15,17 +15,22 @@ const poppins = Poppins({
   display: 'swap',
 })
 
-const FloatingContact = dynamic(() => import("./home/FloatingContact"), {
+const FloatingContact = dynamic(() => import("./components/FloatingContact"), {
   loading: () => <FloatingContactSkeleton />,
   ssr: false,
 });
 
-const NavBar = dynamic(() => import("./home/NavBar"), {
+const Footer = dynamic(() => import("./footer/Footer"), {
+    ssr: true,
+    loading: () => null,
+  });
+
+const NavBar = dynamic(() => import("./components/NavBar"), {
     loading: () => <HeaderSkeleton />,
     ssr: true,
   });
 
-  const ContactDetailsBar = dynamic(() => import("./home/ContactDetailsBar"), {
+  const ContactDetailsBar = dynamic(() => import("./components/ContactDetailsBar"), {
     ssr: true,
     loading: () => null,
   });
@@ -106,7 +111,7 @@ export default function RootLayout({
         <ContactDetailsBar />
         {children}
         <FloatingContact />
-        
+        <Footer />
         </div>
       </body>
     </html>

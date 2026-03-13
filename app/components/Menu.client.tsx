@@ -128,7 +128,7 @@ type MenuProps = {
                       {hyderabadLocations.map((location) => (
                         <Link
                           key={`${service.slug}-${location}`}
-                          href={`/services/${service.slug}/${location
+                          href={`/${service.slug}/${location
                             .toLowerCase()
                             .replace(/\s+/g, "-")}`}
                           onClick={onClose}

@@ -5,14 +5,14 @@ import { CarouselSkeleton ,
   ServicesSkeleton,
   TestimonialsSkeleton,
   HeaderSkeleton,
-  ClientsSkeleton, } from "./home/LoadingSkeletons";
+  ClientsSkeleton, } from "./components/LoadingSkeletons";
 
-  const NavBar = dynamic(() => import("./home/NavBar"), {
+  const NavBar = dynamic(() => import("./components/NavBar"), {
     loading: () => <HeaderSkeleton />,
     ssr: true,
   });
 
-  const ContactDetailsBar = dynamic(() => import("./home/ContactDetailsBar"), {
+  const ContactDetailsBar = dynamic(() => import("./components/ContactDetailsBar"), {
     ssr: true,
     loading: () => null,
   });
@@ -24,32 +24,32 @@ import { CarouselSkeleton ,
   });
 
 
-const Carousel = dynamic(() => import("./home/Carousel"), {
+const Carousel = dynamic(() => import("./components/Carousel"), {
   loading: () => <CarouselSkeleton />,
   ssr: true,
 });
 
-const ButtonCards = dynamic(() => import("./home/ButtonCards"), {
+const ButtonCards = dynamic(() => import("./components/ButtonCards"), {
   loading: () => <ButtonCardsSkeleton />,
   ssr: true,
 });
 
-const ContactForm = dynamic(() => import("./home/ContactForm"), {
+const ContactForm = dynamic(() => import("./components/ContactForm"), {
   ssr: true,
   loading: () => null,
 });
 
-const Services = dynamic(() => import("./home/Services"), {
+const Services = dynamic(() => import("./components/Services"), {
   loading: () => <ServicesSkeleton />,
   ssr: true,
 });
 
-const Testimonials = dynamic(() => import("./home/Testimonials"), {
+const Testimonials = dynamic(() => import("./components/Testimonials"), {
   loading: () => <TestimonialsSkeleton />,
   ssr: true,
 });
 
-const Clients = dynamic(() => import("./home/Clients"), {
+const Clients = dynamic(() => import("./components/Clients"), {
   loading: () => <ClientsSkeleton />,
   ssr: true,
 });
@@ -59,14 +59,10 @@ export default function Home() {
     <>
       {/* <NavBar />
       <ContactDetailsBar /> */}
-    <main className="px-4 pb-6 pt-[1px] md:pt-[3px] sm:p-6">
+    <main className="px-4 pb-6 pt-[1px] md:pt-[3px] sm:p-6 overflow-hidden">
          
       <Carousel />
       <ButtonCards />
-
-      <section className="mt-8">
-        <ContactForm />
-      </section>
 
       <section className="mt-10">
         <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
@@ -81,6 +77,11 @@ export default function Home() {
       <section className="mt-10">
         <h2 className="text-2xl font-semibold mb-4">Clients & Societies</h2>
         <Clients />
+      </section>
+
+      
+      <section className="mt-8">
+        <ContactForm />
       </section>
     </main>
     <Footer />

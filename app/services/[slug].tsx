@@ -1,7 +1,7 @@
 // /pages/services/[slug].tsx
 import { GetStaticPaths, GetStaticProps } from "next"
 import Image from "next/image"
-import { services } from "../home/constants/services"
+import { services } from "../components/constants/services"
 
 type Props = {
   service: {

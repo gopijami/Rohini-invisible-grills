@@ -66,11 +66,11 @@ const Header: React.FC = () => {
 
             <div>
              <h1 className="relative text-sm sm:text-lg md:text-xl font-extrabold tracking-wider text-gray-800">
-  <span className="absolute inset-0 bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-500 bg-clip-text text-transparent filter blur-sm opacity-70"></span>
-  <span className="relative bg-gradient-to-r from-yellow-700 via-yellow-500 to-yellow-400 bg-clip-text text-transparent">
-    Rohini Invisible Grills
-  </span>
-</h1>
+              <span className="absolute inset-0 bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-500 bg-clip-text text-transparent filter blur-sm opacity-70"></span>
+              <span className="relative bg-gradient-to-r from-yellow-700 via-yellow-500 to-yellow-400 bg-clip-text text-transparent">
+                Rohini Invisible Grills
+              </span>
+            </h1>
               <div className="flex items-center gap-2">
               <span className="flex-1 h-[1px] bg-gray-400"></span>
 
