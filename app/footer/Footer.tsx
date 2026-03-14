@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { hyderabadLocations } from "../components/constants/locations";
 
 /* ---------------- SERVICES ---------------- */
 
@@ -14,20 +15,7 @@ export const services = [
 
 /* ---------------- AREAS ---------------- */
 
-const areas = [
-  "Banjara Hills",
-  "Madhapur",
-  "Begumpet",
-  "Kukatpally",
-  "Mehdipatnam",
-  "Secunderabad",
-  "Kompally",
-  "Miyapur",
-  "Manikonda",
-  "Malkajgiri",
-  "Uppal",
-  "Alwal",
-];
+const areas =hyderabadLocations 
 
 export default function Footer() {
   return (
@@ -69,21 +57,23 @@ export default function Footer() {
             ))}
           </ul>
         </div>
+      {/* ---------------- LOCAL AREAS ---------------- */}
+      <div className="h-[500px] overflow-y-scroll overflow-x-hidden scrollbar-hide">
+        <h4 className="text-lg font-semibold text-white mb-4">
+          Local Areas
+        </h4>
 
-        {/* ---------------- LOCAL AREAS ---------------- */}
-        <div>
-          <h4 className="text-lg font-semibold text-white mb-4">
-            Local Areas
-          </h4>
-
-          <ul className="space-y-2 text-sm">
-            {areas.map((area) => (
-              <li key={area} className="hover:text-green-400 cursor-pointer transition">
-                • {area}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="space-y-2 text-sm">
+          {areas.map((area) => (
+            <li
+              key={area}
+              className="hover:text-green-400 cursor-pointer transition-colors duration-300"
+            >
+              • {area}
+            </li>
+          ))}
+        </ul>
+      </div>
 
         {/* ---------------- CONTACT ---------------- */}
         <div>

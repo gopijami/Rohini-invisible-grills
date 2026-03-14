@@ -217,9 +217,10 @@ WhatsApp
 
 <div className="relative bg-white md:bg-[#f1f5f9] md:w-[75%] -mt-[15px] md:-mt-[65px] p-4 md:p-6 rounded-2xl md:rounded-none shadow-xl mx-auto">
 
-<div className="relative w-full md:w-[100%] h-[300px] md:h-[350px] rounded-xl overflow-hidden shadow-2xl mx-auto">
+  <div className="relative w-full md:w-[100%] h-[300px] md:h-[350px] rounded-xl overflow-hidden shadow-2xl mx-auto">
 
-<Image
+    {/* Image */}
+    <Image
 src={"/images/anti-bird-invisible-grills.webp"}
 alt={`Anti bird invisible grill installation in Hyderabad`}
 title={`Anti bird invisible grills Hyderabad`}
@@ -228,7 +229,9 @@ className="object-cover transition-transform duration-700 hover:scale-105"
 priority
 />
 
- {/* Icons Section */}
+  </div>
+
+  {/* Icons Section */}
   <div
     className="
     relative md:absolute
@@ -280,7 +283,7 @@ priority
 
 </div>
 
-</div>
+
 
 {/* CONTENT */}
 

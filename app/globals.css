@@ -72,3 +72,12 @@ img { max-width: 100%; height: auto; display: block; }
 .snap-x { scroll-snap-type: x mandatory; }
 .snap-start { scroll-snap-align: start; }
 
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, Edge */
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* for IE and Edge */
+  scrollbar-width: none;     /* for Firefox */
+}
+
