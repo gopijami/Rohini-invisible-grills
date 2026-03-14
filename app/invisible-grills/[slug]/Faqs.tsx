@@ -20,7 +20,7 @@ export default function FAQSection({ faqs }: { faqs: FAQ[] }) {
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-yellow-400">
           Frequently Asked Questions
         </h2>
 

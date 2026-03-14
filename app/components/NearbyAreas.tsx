@@ -23,7 +23,7 @@ export default function NearbyServiceSection({ page }: { page: PageData }) {
   return (
     <section className="py-12 bg-gray-100">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800">
+        <h2 className="text-2xl font-bold mb-6 text-yellow-600">
           Invisible Grill Installation Near {page.location}
         </h2>
 
@@ -42,8 +42,8 @@ export default function NearbyServiceSection({ page }: { page: PageData }) {
             return (
               <Link
                 key={i}
-                href={`/invisible-grills-in-${slug}`}
-                className="bg-white p-4 rounded-lg shadow transition-all hover:shadow-lg hover:text-blue-800 text-center text-blue-600 font-medium border border-transparent hover:border-blue-200"
+                href={`/invisible-grills/${slug}`}
+                className="bg-white p-4 rounded-lg shadow transition-all hover:shadow-lg hover:text-yellow-400 text-center text-blue-400 font-medium border border-transparent hover:border-blue-200"
               >
                 {locationName}
               </Link>

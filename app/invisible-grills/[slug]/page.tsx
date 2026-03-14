@@ -1,11 +1,25 @@
 import Link from "next/link";
 import { hyderabadLocations as locations } from "../../components/constants/locations";
 import { generateService } from "../../components/seo/invisibleGrillsGenerator";
-import { locationHash, slugify, locationImages } from "../../components/seo/utils";
+import { locationHash, slugify, locationImages, createGrillSeed } from "../../components/seo/utils";
 import NearbyServiceSection from "../../components/NearbyAreas";
 import { Phone, MessageCircle,Plus, Minus } from "lucide-react";
 import Image from "next/image";
 import FAQSection from "./Faqs";
+import { Handshake, Award, ShieldCheck } from "lucide-react";
+import { Poppins, Inter } from "next/font/google";
+
+export const headingFont = Poppins({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-heading"
+});
+
+export const bodyFont = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-body"
+});
 
 
 export async function generateStaticParams() {
@@ -19,18 +33,42 @@ export interface Section {
   content: string[]; 
 }
 
+function seededRandom(seed: number) {
+  return function () {
+    seed |= 0;
+    seed = (seed + 0x6D2B79F5) | 0;
 
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t ^= t + Math.imul(t ^ (t >>> 7), 61 | t);
+
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
 
 
 export function getLocationImage(location: string) {
 
-  const hash = locationHash(location);
+  const seed = createGrillSeed(location.toLowerCase());
 
-  const index = hash % locationImages.length;
+  const rand = seededRandom(seed);
+
+  const index = Math.floor(rand() * locationImages.length);
 
   return locationImages[index];
-
 }
+
+
+
+
+// export function getLocationImage(location: string) {
+
+//   const hash = locationHash(location);
+
+//   const index = hash % locationImages.length;
+
+//   return locationImages[index];
+
+// }
 
 
 export default function Page({ params }: { params: { slug: string , sections: Section[];} }) {
@@ -82,7 +120,7 @@ export default function Page({ params }: { params: { slug: string , sections: Se
   <div
     className="absolute inset-0 bg-cover bg-center"
     style={{
-      backgroundImage: `url('${invisibleGrillImage}')`
+      backgroundImage: `url('${getLocationImage(location || "default location")}')`
     }}
   />
 
@@ -92,11 +130,11 @@ export default function Page({ params }: { params: { slug: string , sections: Se
   {/* Content */}
   <div className="relative max-w-6xl mx-auto px-6 text-center md:text-left">
 
-    <h1 className="text-2xl md:text-3xl font-bold leading-tight mb-6 drop-shadow-lg">
+    <h1 className={`text-2xl md:text-3xl font-bold leading-tight mb-6 drop-shadow-lg ${headingFont.variable}`}>
       {page.title}
     </h1>
 
-    <p className="text-md md:text-lg max-w-3xl text-gray-200">
+    <p className={`text-md md:text-lg max-w-3xl text-gray-200 ${bodyFont.variable}`}>
       {page.shortDescription}
     </p>
 
@@ -151,24 +189,75 @@ export default function Page({ params }: { params: { slug: string , sections: Se
   </div>
 
 </section>
-<div className="relative bg-white md:bg-[#f1f5f9] md:w-[85%] -mt-[15px] md:-mt-[65px] p-4 md:p-6 rounded-2xl md:rounded-none shadow-xl group mx-auto">
-<div className="relative w-full md:w-[100%] h-[300px] md:h-[350px]  rounded-1xl overflow-hidden shadow-2xl group mx-auto">
+<div className="relative bg-white md:bg-[#f1f5f9] md:w-[75%] -mt-[15px] md:-mt-[65px] p-4 md:p-6 rounded-2xl md:rounded-none shadow-xl mx-auto">
 
-  {/* Image */}
-  <Image
-    src={invisibleGrillImage + "?v=" + page.slug}
-    alt={`Invisible grill installation in ${page.location}`}
-    title={`Invisible grills ${page.location}`}
-    fill
-    className="object-cover transition-transform duration-700 group-hover:scale-105"
-    priority
-  />
+  <div className="relative w-full md:w-[100%] h-[300px] md:h-[350px] rounded-xl overflow-hidden shadow-2xl mx-auto">
 
-  {/* Soft Gradient Overlay */}
-  {/* <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div> */}
+    {/* Image */}
+    <Image
+      src={invisibleGrillImage + "?v=" + page.slug}
+      alt={`Invisible grill installation in ${page.location}`}
+      title={`Invisible grills in ${page.location}`}
+      fill
+      className="object-cover transition-transform duration-700 hover:scale-105"
+      priority
+    />
+
+  </div>
+
+  {/* Icons Section */}
+  <div
+    className="
+    relative md:absolute
+    md:bottom-6 md:left-1/2 md:-translate-x-1/2
+    mt-4 md:mt-0
+    w-full md:w-auto
+    px-4 py-4 md:px-8
+    text-center
+
+    md:bg-black/20 
+    md:rounded-full
+    md:shadow-xl
+  "
+  >
+    <div
+      className="
+      grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+      gap-6 md:gap-10
+      items-center
+      "
+    >
+
+      {/* Trusted Homes */}
+      <div className="flex flex-col items-center">
+        <Handshake className="w-8 h-8 md:w-10 md:h-10 text-yellow-400 drop-shadow-lg mb-2" />
+        <p className="text-gray-900 md:text-white text-sm md:text-base font-semibold">
+          15,000+ Trusted Homes
+        </p>
+      </div>
+
+      {/* Quality */}
+      <div className="flex flex-col items-center">
+        <Award className="w-8 h-8 md:w-10 md:h-10 text-yellow-400 drop-shadow-lg mb-2" />
+        <p className="text-gray-900 md:text-white text-sm md:text-base font-semibold">
+          ISO Certified Quality
+        </p>
+      </div>
+
+      {/* Experience */}
+      <div className="flex flex-col items-center">
+        <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-yellow-400 drop-shadow-lg mb-2" />
+        <p className="text-gray-900 md:text-white text-xs md:text-sm font-semibold max-w-[220px]">
+          18+ Years Experience & Expert Installation
+        </p>
+      </div>
+
+    </div>
+  </div>
 
 </div>
-</div>
+
+
 
 
   {/* BREADCRUMBS */}
@@ -194,7 +283,7 @@ export default function Page({ params }: { params: { slug: string , sections: Se
 
   <div key={index}>
     <div >
-  <h2 className="text-1xl font-bold mb-4 text-gray-900">
+  <h2 className="text-2xl font-bold mb-4 text-green-900">
   {section.heading}
   </h2>
   <div className="w-[100%] h-[1px] 
@@ -314,7 +403,7 @@ export default function Page({ params }: { params: { slug: string , sections: Se
 
   {/* CTA */}
 
-  <section className="bg-blue-700 text-white py-14">
+  <section className="bg-[#344A6C] text-white py-14">
 
   <div className="max-w-5xl mx-auto px-6 text-center">
 

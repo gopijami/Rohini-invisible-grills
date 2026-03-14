@@ -137,3 +137,15 @@ export function locationHash(location: string) {
   return Math.abs(hash);
 }
 
+export function createGrillSeed(str: string): number {
+  let seed = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    seed = (seed * 31 + str.charCodeAt(i)) >>> 0;
+  }
+
+  return seed;
+}
+
+
+
