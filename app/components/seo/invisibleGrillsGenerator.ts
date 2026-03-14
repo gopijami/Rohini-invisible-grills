@@ -35,7 +35,7 @@ export const  generateService : (location: string, locations: string[], index: n
   const breadcrumbs = generateBreadcrumb(location,slug)
   const authorityScore = locationAuthorityScore(location)
 
-  const faqs = [
+ const faqs = [
 
     {
       question:`What is the price of invisible grills in ${location}?`,
@@ -131,18 +131,20 @@ export const  generateService : (location: string, locations: string[], index: n
           "Weather resistant and rust proof",
           "Child safety balcony protection",
           "Modern design with clear outside view",
-          "Low maintenance and long lifespan"
+          "Low maintenance and long lifespan",
+          "17 Years of warranty on installation and materials"
         ]
       },
 
       {
         heading: "Applications",
         content: [
-          "Apartment balconies",
-          "High rise buildings",
-          "Residential homes",
-          "Office buildings",
-          "Windows and duct areas"
+          `Apartment balconies in ${location}`,
+          `High rise buildings in ${location}`,
+          `Office buildings in ${location}`,
+          `Residential homes in ${location}`,
+          `Office buildings in ${location}`,
+          `Windows and duct areas in ${location}`
         ]
       },
       nearbySection,

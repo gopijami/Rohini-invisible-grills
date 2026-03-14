@@ -1,31 +1,132 @@
-export default function Footer(){
+import Link from "next/link";
+import { Phone, Mail, MapPin } from "lucide-react";
+
+/* ---------------- SERVICES ---------------- */
+
+export const services = [
+  { title: "Invisible Grills", slug: "invisible-grills" },
+  { title: "Balcony Safety Invisible Grills", slug: "balcony-safety-invisible-grills" },
+  { title: "Anti Bird Invisible Grills", slug: "anti-bird-invisible-grills" },
+  { title: "Sports Nets", slug: "sports-nets" },
+  { title: "Invisible Grills for Windows", slug: "invisible-grills-for-windows" },
+  { title: "Children Safety Invisible Grills", slug: "children-safety-invisible-grills" },
+];
+
+/* ---------------- AREAS ---------------- */
+
+const areas = [
+  "Banjara Hills",
+  "Madhapur",
+  "Begumpet",
+  "Kukatpally",
+  "Mehdipatnam",
+  "Secunderabad",
+  "Kompally",
+  "Miyapur",
+  "Manikonda",
+  "Malkajgiri",
+  "Uppal",
+  "Alwal",
+];
+
+export default function Footer() {
   return (
-    <footer className="bg-gray-50 border-t mt-8 p-6">
-      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between gap-4">
+    <footer className="bg-[#0b1f2a] text-gray-300 mt-16">
+      
+      {/* MAIN FOOTER */}
+      <div className="max-w-7xl mx-auto px-6 py-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+
+        {/* ---------------- ABOUT ---------------- */}
         <div>
-          <h3 className="font-semibold">Rohini Invisible Grills</h3>
-          <p className="text-sm text-gray-600">Address: 123, Example Street, Hyderabad</p>
-          <p className="text-sm text-gray-600">Phone: +91 99 0000 0000</p>
+          <h3 className="text-xl font-semibold text-white mb-4">
+            Rohini Invisible Grills
+          </h3>
+
+          <p className="text-sm leading-relaxed text-gray-400">
+            Rohini Invisible Grills is a trusted name in modern home safety
+            solutions. We specialize in invisible grills, balcony safety
+            protection, and anti-bird systems designed for modern apartments
+            and villas.
+          </p>
         </div>
+
+        {/* ---------------- SERVICES ---------------- */}
         <div>
-          <h4 className="font-medium">Services</h4>
-          <ul className="text-sm text-gray-600">
-            <li>Invisible Grills</li>
-            <li>Balcony Safety Nets</li>
-            <li>Anti Bird Nets</li>
+          <h4 className="text-lg font-semibold text-white mb-4">
+            Services
+          </h4>
+
+          <ul className="space-y-2 text-sm">
+            {services.map((service) => (
+              <li key={service.slug}>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="hover:text-green-400 transition-colors duration-300"
+                >
+                  • {service.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
+
+        {/* ---------------- LOCAL AREAS ---------------- */}
         <div>
-          <h5 className="font-medium">Follow</h5>
-          <div className="flex gap-3 mt-2">
-            <a className="text-sm text-gray-600">Facebook</a>
-            <a className="text-sm text-gray-600">Instagram</a>
-            <a className="text-sm text-gray-600">LinkedIn</a>
+          <h4 className="text-lg font-semibold text-white mb-4">
+            Local Areas
+          </h4>
+
+          <ul className="space-y-2 text-sm">
+            {areas.map((area) => (
+              <li key={area} className="hover:text-green-400 cursor-pointer transition">
+                • {area}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* ---------------- CONTACT ---------------- */}
+        <div>
+          <h4 className="text-lg font-semibold text-white mb-4">
+            Contact Us
+          </h4>
+
+          <div className="space-y-4 text-sm">
+
+            <div className="flex items-start gap-3">
+              <Phone className="w-5 h-5 text-green-400 mt-1" />
+              <div>
+                <p>+91 8790518724</p>
+                <p>+91 9491008380</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Mail className="w-5 h-5 text-green-400" />
+              <p>contact@rohiniinvisiblegrills.com</p>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <MapPin className="w-5 h-5 text-green-400 mt-1" />
+              <p className="text-gray-400 leading-relaxed">
+                Door No 5-11, Madhapur,<br/>
+                Hyderabad – 500081<br/><br/>
+
+                Plot 398, C Block,<br/>
+                Kondapur, Hyderabad – 500084
+              </p>
+            </div>
+
           </div>
         </div>
+
       </div>
 
-      <div className="text-center text-xs text-gray-500 mt-6">© {new Date().getFullYear()} Rohini Invisible Grills. All rights reserved.</div>
+      {/* ---------------- BOTTOM BAR ---------------- */}
+      <div className="border-t border-white/10 text-center text-sm py-5 text-gray-400">
+        © {new Date().getFullYear()} Rohini Invisible Grills. All Rights Reserved.
+      </div>
+
     </footer>
-  )
+  );
 }

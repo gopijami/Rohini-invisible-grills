@@ -16,8 +16,8 @@ export const services = [
     slug: "sports-nets",
   },
   {
-    title: "Duct Area Safety Invisible Grills",
-    slug: "duct-area-safety-invisible-grills",
+    title: "Invisible Grills for Windows",
+    slug: "invisible-grills-for-windows",
   },
   {
     title: "Children Safety Invisible Grills",

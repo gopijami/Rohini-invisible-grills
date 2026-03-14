@@ -112,6 +112,24 @@ export default function Page({ params }: { params: { slug: string , sections: Se
     }}
   />
 
+  {/*Location Authority Schema */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: page.title,
+        areaServed: page.location,
+        additionalProperty: {
+          "@type": "PropertyValue",
+          name: "Location Authority Score",
+          value: page.authorityScore
+        }
+      })
+    }}
+  />
+
   {/* HERO SECTION */}
 
   <section className="relative md:h-[400px] py-10 text-white">
@@ -417,7 +435,7 @@ export default function Page({ params }: { params: { slug: string , sections: Se
   </p>
 
   <a
-  href="tel:+919999999999"
+  href="/contact-us"
   className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold"
   >
   Get Free Quote
