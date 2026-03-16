@@ -8,14 +8,15 @@ import Image from "next/image";
 import FAQSection from "./Faqs";
 import { Handshake, Award, ShieldCheck } from "lucide-react";
 import { Poppins, Inter } from "next/font/google";
+import { services } from "../../components/constants/services";
 
-export const headingFont = Poppins({
+ const headingFont = Poppins({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   variable: "--font-heading"
 });
 
-export const bodyFont = Inter({
+ const bodyFont = Inter({
   subsets: ["latin"],
   weight: ["400", "500"],
   variable: "--font-body"
@@ -23,12 +24,16 @@ export const bodyFont = Inter({
 
 
 export async function generateStaticParams() {
-  return locations.map((location) => ({
-    slug: slugify(location),
-  }));
+  return services.flatMap((service) =>
+    locations.map((location) => ({
+      service: service.slug,
+      location: slugify(location),
+      slug: slugify(location)
+    }))
+  );
 }
 
-export interface Section {
+interface Section {
   heading: string;
   content: string[]; 
 }
@@ -46,7 +51,7 @@ function seededRandom(seed: number) {
 }
 
 
-export function getLocationImage(location: string) {
+ function getLocationImage(location: string) {
 
   const seed = createGrillSeed(location.toLowerCase());
 

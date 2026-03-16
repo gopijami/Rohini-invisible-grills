@@ -14,11 +14,11 @@ import { Inter } from "next/font/google"
 const inter = Inter({ subsets: ["latin"] })
 
 
-const MenuClient  = dynamic(() => import('./Menu.client'), {
+const MenuClient  = dynamic(() => import('./Menuclient'), {
   ssr: false,
 })
 
-const DropdownClient = dynamic(() => import('./Dropdown.client'), {
+const DropdownClient = dynamic(() => import('./Dropdownclient'), {
   ssr: false,
 })
 

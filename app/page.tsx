@@ -6,6 +6,7 @@ import { CarouselSkeleton ,
   TestimonialsSkeleton,
   HeaderSkeleton,
   ClientsSkeleton, } from "./components/LoadingSkeletons";
+  // import { ServicesGrid } from "./components/products/ServicesGrid";
 
   const NavBar = dynamic(() => import("./components/NavBar"), {
     loading: () => <HeaderSkeleton />,
@@ -39,6 +40,12 @@ const ContactForm = dynamic(() => import("./components/ContactForm"), {
   loading: () => null,
 });
 
+const ServicesGrid = dynamic(() => import("./components/products/ServicesGrid"), {
+  ssr: true,
+  loading: () => null,
+});
+
+
 const Services = dynamic(() => import("./components/Services"), {
   loading: () => <ServicesSkeleton />,
   ssr: true,
@@ -59,10 +66,12 @@ export default function Home() {
     <>
       {/* <NavBar />
       <ContactDetailsBar /> */}
-    <main className="px-4 pb-6 pt-[1px] md:pt-[3px] sm:p-6 overflow-hidden">
+    <main className="px-4 bg-[#fff] pb-6 pt-[1px] md:pt-[3px] sm:p-6 overflow-hidden">
          
       <Carousel />
       <ButtonCards />
+
+      <ServicesGrid />
 
       <section className="mt-10">
         <h2 className="text-2xl font-semibold mb-4">Our Services</h2>

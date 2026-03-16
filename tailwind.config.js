@@ -8,6 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        fontFamily: {
+        serif: ["Merriweather", "serif"], // Title font like design
+      },
         primary: {
           DEFAULT: "#0b5f3c",
           600: "#0a5a36",

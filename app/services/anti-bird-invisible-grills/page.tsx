@@ -7,13 +7,13 @@ import { Poppins, Inter } from "next/font/google";
 import { buildFullSchema } from "../../components/seo/schema";
 import { generateBreadcrumb, locationAuthorityScore } from "../../components/seo/utils";
 
-export const headingFont = Poppins({
+const headingFont = Poppins({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   variable: "--font-heading"
 });
 
-export const bodyFont = Inter({
+const bodyFont = Inter({
   subsets: ["latin"],
   weight: ["400", "500"],
   variable: "--font-body"
