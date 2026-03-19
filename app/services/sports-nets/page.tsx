@@ -4,22 +4,22 @@ import { Phone, MessageCircle,Plus, Minus } from "lucide-react";
 import Image from "next/image";
 import FAQSection from "../../invisible-grills/[slug]/Faqs";
 import { Handshake, Award, ShieldCheck } from "lucide-react";
-import { Poppins, Inter } from "next/font/google";
+// import { Poppins, Inter } from "next/font/google";
 import { buildFullSchema } from "../../components/seo/schema";
 import { generateBreadcrumb, locationAuthorityScore } from "../../components/seo/utils";
 import LocationScroller from "../../components/LocationsWeServe";
 
-const headingFont = Poppins({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-heading"
-});
+// const headingFont = Poppins({
+//   subsets: ["latin"],
+//   weight: ["500", "600", "700"],
+//   variable: "--font-heading"
+// });
 
-const bodyFont = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-body"
-});
+// const bodyFont = Inter({
+//   subsets: ["latin"],
+//   weight: ["400", "500"],
+//   variable: "--font-body"
+// });
 
 
 
@@ -165,11 +165,11 @@ answer:`Customers searching best sports nets near me in ${location} choose us fo
   {/* Content */}
  <div className="relative max-w-6xl mx-auto px-6 text-center md:text-left">
 
-  <h1 className={`text-1xl md:text-3xl font-bold leading-tight mb-6 drop-shadow-lg ${headingFont.variable}`}>
+  <h1 className={`text-1xl md:text-3xl font-bold leading-tight mb-6 drop-shadow-lg `}>
     Sports Nets Installation in Hyderabad – Cricket, Football & Multi-Sports Nets Near You
   </h1>
 
-  <p className={`text-md md:text-[16px] max-w-3xl text-gray-200 ${bodyFont.variable}`}>
+  <p className={`text-md md:text-[16px] max-w-3xl text-gray-200 `}>
     Professional sports nets installation in Hyderabad for cricket practice nets, football ground nets, badminton courts, terrace sports safety nets, and playground protection. Our durable and affordable sports nets provide safety, ball control, and long-lasting performance for homes, schools, and sports academies searching sports nets near me.
   </p>
 

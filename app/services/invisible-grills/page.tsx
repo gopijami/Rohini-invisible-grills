@@ -4,22 +4,22 @@ import { Phone, MessageCircle,Plus, Minus } from "lucide-react";
 import Image from "next/image";
 import FAQSection from "../../invisible-grills/[slug]/Faqs";
 import { Handshake, Award, ShieldCheck } from "lucide-react";
-import { Poppins, Inter } from "next/font/google";
+// import { Poppins, Inter } from "next/font/google";
 import { buildFullSchema } from "../../components/seo/schema";
 import { generateBreadcrumb, locationAuthorityScore } from "../../components/seo/utils";
 import LocationScroller from "../../components/LocationsWeServe";
 
-const headingFont = Poppins({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-heading"
-});
+// const headingFont = Poppins({
+//   subsets: ["latin"],
+//   weight: ["500", "600", "700"],
+//   variable: "--font-heading"
+// });
 
-const bodyFont = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-body"
-});
+// const bodyFont = Inter({
+//   subsets: ["latin"],
+//   weight: ["400", "500"],
+//   variable: "--font-body"
+// });
 
 
 
@@ -158,11 +158,11 @@ const faqs = [
   {/* Content */}
   <div className="relative max-w-6xl mx-auto px-6 text-center md:text-left">
 
-    <h1 className={`text-2xl md:text-3xl font-bold leading-tight mb-6 drop-shadow-lg ${headingFont.variable}`}>
+    <h1 className={`text-2xl md:text-3xl font-bold leading-tight mb-6 drop-shadow-lg `}>
       Invisible grills in Hyderabad - Professional Installation for Bird Protection
     </h1>
 
-    <p className={`text-md md:text-lg max-w-3xl text-gray-200 ${bodyFont.variable}`}>
+    <p className={`text-md md:text-lg max-w-3xl text-gray-200 `}>
       Invisible grills in Hyderabad designed for modern homes that need safety without losing open views strong stainless steel cables protect balconies windows and high rise spaces while keeping the design elegant and minimal
     </p>
 

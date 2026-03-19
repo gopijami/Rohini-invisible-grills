@@ -6,23 +6,23 @@ import { Phone, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import FAQSection from "../../balcony-safety-invisible-grills/[slug]/Faqs";
 import { Handshake, Award, ShieldCheck } from "lucide-react";
-import { Poppins, Inter } from "next/font/google";
+// import { Poppins, Inter } from "next/font/google";
 import { services } from "../../components/constants/services";
 import { generateAntiBirdInvisibleGrillservice } from "../../components/seo/antiBirdInvisibleGrillsGenerator";
 import {generateSportsNetsService} from "../../components/seo/sportsNetsGenerator"
 import LocationScroller from "../../components/LocationsWeServe";
 
- const headingFont = Poppins({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-heading"
-});
+//  const headingFont = Poppins({
+//   subsets: ["latin"],
+//   weight: ["500", "600", "700"],
+//   variable: "--font-heading"
+// });
 
- const bodyFont = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-body"
-});
+//  const bodyFont = Inter({
+//   subsets: ["latin"],
+//   weight: ["400", "500"],
+//   variable: "--font-body"
+// });
 
 const separator = (service: string): string => {
   const parts = service.split("/");
@@ -174,11 +174,11 @@ export default function Page({ params }: { params: { slug: string , sections: Se
   {/* Content */}
   <div className="relative max-w-6xl mx-auto px-6 text-center md:text-left">
 
-    <h1 className={`text-2xl md:text-3xl font-bold leading-tight mb-6 drop-shadow-lg ${headingFont.variable}`}>
+    <h1 className={`text-2xl md:text-3xl font-bold leading-tight mb-6 drop-shadow-lg `}>
       {page.title}
     </h1>
 
-    <p className={`text-md md:text-lg max-w-3xl text-gray-200 ${bodyFont.variable}`}>
+    <p className={`text-md md:text-lg max-w-3xl text-gray-200 `}>
       {page.shortDescription}
     </p>
 
