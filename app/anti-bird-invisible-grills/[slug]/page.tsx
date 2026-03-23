@@ -76,7 +76,7 @@ export async function generateMetadata({
     description,
 
    keywords: Array.from(new Set([
-  ...autokeywords,
+  // ...autokeywords,
   primaryKeyword,
   `Anti bird nets ${location}`,
   `Invisible grills ${location}`,

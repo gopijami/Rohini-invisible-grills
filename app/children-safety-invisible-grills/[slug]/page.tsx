@@ -12,6 +12,138 @@ import { generateChildrenSafetyInvisibleGrillService } from "../../components/se
 import LocationScroller from "../../components/LocationsWeServe";
 import {buildSchemaGraph } from "../../components/schema/combineSchema";
 import { hyderabadOtherLocations } from "../../components/data/telangana";
+import type { Metadata } from "next";
+import {getGeo} from "../../components/utils/getGeo"
+import {generateLocationKeywords} from "../../components/seo/keywordGenerator"
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+
+  const location = locations.find(
+    (loc) => slugify(loc) === params.slug
+  );
+
+  if (!location) {
+    return {
+      title: "Page Not Found | Rohini Invisible Grills",
+      description: "The requested service page could not be found.",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const page = generateChildrenSafetyInvisibleGrillService(
+    location,
+    locations,
+    locations.indexOf(location)
+  );
+
+  const geo = getGeo(params.slug)
+
+  const url = `https://rohiniinvisiblegrills.com/children-safety-invisible-grills/${params.slug}`;
+
+  const image = getLocationImage(location);
+
+  /* =========================
+     ADVANCED SEO VARIABLES
+  ========================== */
+
+  const primaryKeyword = `Children safety Invisible Grills in ${location}`;
+   const autokeywords = generateLocationKeywords(
+    location,
+    locations
+  );
+  const title =
+    `${primaryKeyword} | Pigeon Safety & anti fall Nets & Balcony Protection | Rohini Invisible Grills`;
+
+  const description = `
+Need children safety invisible grills in ${location}? 
+Secure your balcony with child-proof invisible grills that prevent accidents while keeping your view open. 
+15+ years experience, durable stainless steel cables, expert fitting & free site visit across ${location}. 
+Rohini Invisible Grills — safety parents trust.
+`;
+
+  /* =========================
+     METADATA RETURN
+  ========================== */
+
+  return {
+    metadataBase: new URL("https://rohiniinvisiblegrills.com"),
+
+    title: {
+      default: title,
+      template: "%s | Rohini Invisible Grills",
+    },
+
+    description,
+
+   keywords: Array.from(new Set([
+  // ...autokeywords,
+  primaryKeyword,
+  `Invisible grills ${location}`,
+  `Anti bird invisible grills ${location}`,
+  `Balcony safety grills ${location}`,
+  "Pigeon protection balcony",
+  "Child safety invisible grills",
+  "Invisible grills installation service",
+  "Invisible grills Telangana",
+  `Bird Control grills ${location}`,
+  "children safety invisible grill installation",
+  "Rohini Invisible Grills",
+])).slice(0, 30),
+
+    alternates: {
+      canonical: url,
+    },
+
+    category: "Bird Control",
+
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: "Rohini Invisible Grills",
+      locale: "en_IN",
+      type: "website",
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: primaryKeyword,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+
+    other: {
+  "geo.region": geo.region,
+  "geo.placename": location,
+  "geo.position": `${geo.lat};${geo.lng}`,
+  ICBM: `${geo.lat}, ${geo.lng}`,
+},
+  };
+}
 
 const locations = [...hyderabadLocations , ...hyderabadOtherLocations]
 

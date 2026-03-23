@@ -13,6 +13,136 @@ import LocationScroller from "../../components/LocationsWeServe";
 import { InProductlocationImages } from "../../components/seo/utils";
 import {buildSchemaGraph } from "../../components/schema/combineSchema";
 import { hyderabadOtherLocations } from "../../components/data/telangana";
+import type { Metadata } from "next";
+import {getGeo} from "../../components/utils/getGeo"
+import {generateLocationKeywords} from "../../components/seo/keywordGenerator"
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+
+  const location = locations.find(
+    (loc) => slugify(loc) === params.slug
+  );
+
+  if (!location) {
+    return {
+      title: "Page Not Found | Rohini Invisible Grills",
+      description: "The requested service page could not be found.",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const page =generateService(
+    location,
+    locations,
+    locations.indexOf(location)
+  );
+
+  const geo = getGeo(params.slug)
+
+  const url = `https://rohiniinvisiblegrills.com/invisible-grills/${params.slug}`;
+
+  const image = getLocationImage(location);
+
+  /* =========================
+     ADVANCED SEO VARIABLES
+  ========================== */
+
+  const primaryKeyword = `Invisible Grills in ${location}`;
+   const autokeywords = generateLocationKeywords(
+    location,
+    locations
+  );
+  const title =
+    `${primaryKeyword} | Pigeon Safety & Balcony Protection & bird spikes | Rohini Invisible Grills`;
+
+  const description = `
+Best invisible grills installation in ${location} for balconies and windows. 
+Strong, rust-free stainless steel safety grills that keep your home secure while maintaining a clear view. 15+ years of experience,  
+Expert installation, competitive price & free inspection by Rohini Invisible Grills.
+`;
+  /* =========================
+     METADATA RETURN
+  ========================== */
+
+  return {
+    metadataBase: new URL("https://rohiniinvisiblegrills.com"),
+
+    title: {
+      default: title,
+      template: "%s | Rohini Invisible Grills",
+    },
+
+    description,
+
+   keywords: Array.from(new Set([
+  // ...autokeywords,
+  primaryKeyword,
+  `Invisible grills ${location}`,
+  `Anti bird invisible grills ${location}`,
+  `Balcony safety grills ${location}`,
+  "Pigeon protection balcony",
+  "Child safety invisible grills",
+  "Invisible grills installation service",
+  "Bird spikes installation",
+  "Invisible grills Telangana",
+  `Bird Control grills ${location}`,
+  "Rohini Invisible Grills",
+])).slice(0, 30),
+
+    alternates: {
+      canonical: url,
+    },
+
+    category: "Bird Control",
+
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: "Rohini Invisible Grills",
+      locale: "en_IN",
+      type: "website",
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: primaryKeyword,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+
+    other: {
+  "geo.region": geo.region,
+  "geo.placename": location,
+  "geo.position": `${geo.lat};${geo.lng}`,
+  ICBM: `${geo.lat}, ${geo.lng}`,
+},
+  };
+}
 
 const locations = [...hyderabadLocations , ...hyderabadOtherLocations]
 
