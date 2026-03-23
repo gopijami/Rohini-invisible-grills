@@ -4,10 +4,14 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { hyderabadLocations } from "./constants/locations";
 import { slugify } from "./seo/utils";
+import {hyderabadOtherLocations} from "./data/telangana"
 
 type Props = {
   service: string;
 };
+
+const locations = [...hyderabadLocations , ...hyderabadOtherLocations]
+
 
 export default function LocationScroller({ service }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -44,7 +48,7 @@ export default function LocationScroller({ service }: Props) {
         ref={scrollRef}
         className="flex gap-5 overflow-x-auto scrollbar-hide px-4"
       >
-        {[...hyderabadLocations, ...hyderabadLocations].map(
+        {[...locations, ...locations].map(
           (location, index) => (
             <Link
               key={index}

@@ -6,17 +6,25 @@ const serviceList = [
   'Balcony Safety Invisible Grills',
   'Anti Bird Invisible Grills',
   'Sports Nets',
-  'Duct Area Safety Invisible Grills',
+  'Windows Invisible Grills',
   'Children Safety Invisible Grills'
 ]
 
+const slugs = [
+  "/services/invisible-grills",
+  "/services/balcony-safety-invisible-grills",
+  "/services/anti-bird-invisible-grills",
+  "/services/sports-nets",
+  "/services/windows-invisible-grills",
+  "/services/children-safety-invisible-grills"
+]
 const serviceImages: Record<string, string> = {
   'Invisible Grills': '/images/invisible-grill.webp',
-  'Balcony Safety Invisible Grills': '/images/Balcony-Invisible-Grills-1.webp',
-  'Anti Bird Invisible Grills': '/images/anti-bird-invisible-grills.webp',
+  'Balcony Safety Invisible Grills': '/cards/Balcony-Invisible-Grills-1.webp',
+  'Anti Bird Invisible Grills': '/cards/anti-bird-invisible-grills.webp',
   'Sports Nets': '/images/sport-nets-installation-hyderabad.webp',
-  'Duct Area Safety Invisible Grills': '/images/drybalcony-invisible-grills-near-me.webp',
-  'Children Safety Invisible Grills': '/images/children-safety-invisible-grills-for-balcony.webp'
+  'Windows Invisible Grills': '/cards/window-anti-bird-invisible-grills.webp',
+  'Children Safety Invisible Grills': '/cards/children-safety-invisible-grills-for-balcony.webp'
 }
 
 const serviceDescriptions: Record<string, string> = {
@@ -32,8 +40,8 @@ const serviceDescriptions: Record<string, string> = {
   'Sports Nets':
     'Sports nets are used for cricket practice nets, terrace play areas, and indoor sports courts. These strong nets protect people and stop balls from going outside.',
 
-  'Duct Area Safety Invisible Grills':
-    'Duct area invisible grills cover open duct spaces in apartments. They prevent birds, pests, and accidental falls while allowing fresh air and light.',
+  'Windows Invisible Grills':
+  'Windows invisible grills provide strong safety protection without blocking your outside view. Designed with high-tensile stainless steel cables, they prevent accidental falls, enhance child safety, and keep birds away while allowing maximum airflow, sunlight, and modern aesthetics for homes and apartments.',
 
   'Children Safety Invisible Grills':
     'Children safety invisible grills protect kids from falling from balconies or windows. Strong stainless wires keep the area safe while keeping the outside view clear.'
@@ -45,13 +53,15 @@ export default function Services(){
   return (
     <div className="py-2">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {serviceList.map((s) => {
-          const desc = serviceDescriptions[s]
-          const isExpanded = expanded[s]
+        {serviceList.map((s,i) => {
+          const desc = serviceDescriptions[s];
+          const isExpanded = expanded[s];
+          const slug = slugs[i]
 
           return (
             <article key={s} className="bg-white border rounded-lg p-4 shadow-soft shadow-soft transform transition-transform hover:scale-105 overflow-hidden">
               <div className="flex gap-4">
+                <div className=" flex flex-col">
                 <div className="w-20 h-16 sm:w-28 sm:h-20 flex-shrink-0 overflow-hidden rounded-md">
                   <img
                     src={serviceImages[s] ?? '/images/service-placeholder.svg'}
@@ -59,11 +69,18 @@ export default function Services(){
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
+                  
                 </div>
-
+                <a 
+                  href={slug} 
+                  className="block lg:hidden mt-auto inline-flex items-center justify-center gap-2 px-3 py-2 bg-transparent border border-primary text-primary  rounded-md text-sm transition-transform active:scale-95"
+                  aria-label={`Call to know more about ${s}`}
+                >
+                  Know More <span className="sr-only">about {s}</span>
+                </a>
+            </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold">{s}</h3>
-
                   <p className="text-sm text-gray-500 mt-1">
                     {isExpanded ? desc : `${desc.slice(0,80)}`}
                     {desc.length > 80 && !isExpanded && (
@@ -79,12 +96,20 @@ export default function Services(){
                   </p>
 
                   <div className="mt-3 flex gap-2">
-                    <a href="tel:+919900000000" className="inline-flex items-center gap-2 px-3 py-2 bg-primary text-white rounded-md text-sm">
+                    <a href="tel:+918790518724" className="inline-flex items-center gap-2 px-3 py-2 bg-primary text-white rounded-md text-sm">
                       Call
                     </a>
 
-                    <a href="https://wa.me/919900000000" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-2 bg-green-700 text-white rounded-md text-sm">
+                    <a href="https://wa.me/919491008380" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-2 bg-green-700 text-white rounded-md text-sm">
                       WhatsApp
+                    </a>
+                   <a
+                      href={slug} 
+                      className="hidden lg:inline-flex items-center gap-2 px-3 py-2 
+                                bg-transparent border border-primary text-primary 
+                                rounded-md text-sm"
+                    >
+                      Know More
                     </a>
                   </div>
                 </div>

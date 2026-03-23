@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { hyderabadLocations as locations } from "../../components/constants/locations";
+import { hyderabadLocations } from "../../components/constants/locations";
 import { locationHash, slugify, locationImages, createGrillSeed, locationImagesForAntiBirdInvisibleGrills, BalconySafetyAntiBirdInvisibleGrills, } from "../../components/seo/utils";
 import NearbyServiceSection from "../../components/NearbyAreas";
 import { Phone, MessageCircle, Plus, Minus } from "lucide-react";
@@ -11,6 +11,136 @@ import { services } from "../../components/constants/services";
 import { generateAntiBirdInvisibleGrillservice } from "../../components/seo/antiBirdInvisibleGrillsGenerator";
 import LocationScroller from "../../components/LocationsWeServe";
 import { buildSchemaGraph } from "../../components/schema/combineSchema";
+import {hyderabadOtherLocations} from "../../components/data/telangana";
+import { getGeo } from "../../components/utils/getGeo";
+import {generateLocationKeywords} from "../../components/seo/keywordGenerator"
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+
+  const location = locations.find(
+    (loc) => slugify(loc) === params.slug
+  );
+
+  if (!location) {
+    return {
+      title: "Page Not Found | Rohini Invisible Grills",
+      description: "The requested service page could not be found.",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const page = generateAntiBirdInvisibleGrillservice(
+    location,
+    locations,
+    locations.indexOf(location)
+  );
+
+  const geo = getGeo(params.slug)
+
+  const url = `https://rohiniinvisiblegrills.com/anti-bird-invisible-grills/${params.slug}`;
+
+  const image = getLocationImage(location);
+
+  /* =========================
+     ADVANCED SEO VARIABLES
+  ========================== */
+
+  const primaryKeyword = `Anti Bird Invisible Grills in ${location}`;
+   const autokeywords = generateLocationKeywords(
+    location,
+    locations
+  );
+  const title =
+    `${primaryKeyword} | Pigeon Safety Nets & Balcony Protection | Rohini Invisible Grills`;
+
+  const description =
+    `Looking for anti bird invisible grills in ${location}? Professional pigeon safety net & balcony protection installation near you. 15+ years experience, ISO quality materials, expert installation, affordable price & free site visit in ${location}. Call Rohini Invisible Grills today.`;
+
+  /* =========================
+     METADATA RETURN
+  ========================== */
+
+  return {
+    metadataBase: new URL("https://rohiniinvisiblegrills.com"),
+
+    title: {
+      default: title,
+      template: "%s | Rohini Invisible Grills",
+    },
+
+    description,
+
+   keywords: Array.from(new Set([
+  ...autokeywords,
+  primaryKeyword,
+  `Anti bird nets ${location}`,
+  `Invisible grills ${location}`,
+  `Bird protection balcony ${location}`,
+  `Pigeon nets installation ${location}`,
+  `Balcony safety grills ${location}`,
+  `Anti bird invisible grills near me`,
+  `Anti bird invisible grills Telangana`,
+  "Rohini Invisible Grills",
+])).slice(0, 30),
+
+    alternates: {
+      canonical: url,
+    },
+
+    category: "Bird Control",
+
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: "Rohini Invisible Grills",
+      locale: "en_IN",
+      type: "website",
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: primaryKeyword,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+
+    other: {
+  "geo.region": geo.region,
+  "geo.placename": location,
+  "geo.position": `${geo.lat};${geo.lng}`,
+  ICBM: `${geo.lat}, ${geo.lng}`,
+},
+  };
+}
+
+
+
 
 //  const headingFont = Poppins({
 //   subsets: ["latin"],
@@ -24,6 +154,8 @@ import { buildSchemaGraph } from "../../components/schema/combineSchema";
 //   variable: "--font-body"
 // });
 
+const locations = [...hyderabadLocations , ...hyderabadOtherLocations]
+
 const separator = (service: string): string => {
   const parts = service.split("/");
 
@@ -36,7 +168,7 @@ const separator = (service: string): string => {
 export async function generateStaticParams() {
   return services.flatMap((service) =>
     locations.map((location) => ({
-      service: service.slug,
+      service: service?.slug,
       location: slugify(location),
       slug: slugify(location)
     }))
@@ -102,15 +234,17 @@ export default function Page({ params }: { params: { slug: string, sections: Sec
     (loc) => slugify(loc) === params.slug
   );
 
-  const invisibleGrillImage = getLocationImage(location || "default location");
-  const inProductImage = getLocationImageInProduct(location || "default location");
-
   if (!location) {
     return <div>Location not found</div>;
   }
 
 
   if (!location) return null;
+
+  const invisibleGrillImage = getLocationImage(location || "default location");
+  const inProductImage = getLocationImageInProduct(location || "default location");
+
+  
 
   const page = generateAntiBirdInvisibleGrillservice(
     location,

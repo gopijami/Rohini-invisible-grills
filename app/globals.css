@@ -81,5 +81,18 @@ img { max-width: 100%; height: auto; display: block; }
   scrollbar-width: none;     /* for Firefox */
 }
 
+/* Add to your CSS */
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
 
+html, body {
+  overflow-x: hidden;
+}
 

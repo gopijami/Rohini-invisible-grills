@@ -12,7 +12,7 @@ import { memo } from 'react'
 
 function Clients(){
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {clients.map((c) => (
           <div key={c.name} className="flex flex-col items-center gap-3 p-4 bg-white border rounded shadow-sm w-full shadow-soft transform transition-transform hover:scale-105 overflow-hidden">

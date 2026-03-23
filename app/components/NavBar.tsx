@@ -11,6 +11,7 @@ import {
 import { memo } from "react"
 import { Inter } from "next/font/google"
 
+
 const inter = Inter({ subsets: ["latin"] })
 
 
@@ -64,6 +65,7 @@ const Header: React.FC = () => {
         {/* Main Header */}
         <header className="bg-gradient-to-br from-white via-orange-50 to-gray-100 flex items-center  justify-between px-6 pt-4 pb-0">
           <div className="flex  items-center gap-3">
+          <Link href="/">
             <Image
               src="/Rohini_logo.webp"
               alt="Rohini Invisible Grills"
@@ -72,6 +74,7 @@ const Header: React.FC = () => {
               priority
               className="h-16 sm:h-22 w-auto"
             />
+          </Link>
 
             <div>
              <h1 className="relative text-sm sm:text-lg md:text-xl font-extrabold tracking-wider text-gray-800">

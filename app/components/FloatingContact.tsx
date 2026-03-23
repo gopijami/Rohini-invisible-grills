@@ -6,7 +6,7 @@ export default function FloatingContact() {
 
       {/* Call Button */}
       <a
-        href="tel:+919900000000"
+        href="tel:+918790518724"
         className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-lg hover:scale-105 transition"
         aria-label="Call Us"
       >
@@ -29,7 +29,7 @@ export default function FloatingContact() {
 
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/919900000000"
+        href="https://wa.me/919491008380"
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white shadow-lg hover:scale-105 transition"

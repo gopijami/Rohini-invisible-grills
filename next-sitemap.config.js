@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://rohini-invisible-grills.com',
+  siteUrl: 'https://rohiniinvisiblegrills.com/',
   generateRobotsTxt: true,
   exclude: ['/404', '/500', '/_*'],
   robotsTxtOptions: {

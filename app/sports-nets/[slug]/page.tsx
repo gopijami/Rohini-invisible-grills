@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { hyderabadLocations as locations } from "../../components/constants/locations";
+import { hyderabadLocations } from "../../components/constants/locations";
 import { slugify, createGrillSeed, locationImagesForSportsNets, BalconySafetySportsNets, } from "../../components/seo/utils";
 import NearbyServiceSection from "../../components/NearbyAreas";
 import { Phone, MessageCircle } from "lucide-react";
@@ -12,7 +12,9 @@ import { generateAntiBirdInvisibleGrillservice } from "../../components/seo/anti
 import {generateSportsNetsService} from "../../components/seo/sportsNetsGenerator"
 import LocationScroller from "../../components/LocationsWeServe";
 import {buildSchemaGraph } from "../../components/schema/combineSchema";
+import { hyderabadOtherLocations } from "../../components/data/telangana";
 
+const locations = [...hyderabadLocations , ...hyderabadOtherLocations]
 
 //  const headingFont = Poppins({
 //   subsets: ["latin"],
