@@ -146,11 +146,9 @@ export function locationHash(location: string) {
 
 export function createGrillSeed(str: string): number {
   let seed = 0;
-
   for (let i = 0; i < str.length; i++) {
     seed = (seed * 31 + str.charCodeAt(i)) >>> 0;
   }
-
   return seed;
 }
 
@@ -272,5 +270,45 @@ export const BalconySafetyBirdSpikesInstallation = [
   "/spikes/cards/pigeon-bird-spikes-installation.webp",
   "/spikes/cards/bird-spikes-installation-near-me.webp",
   "/spikes/cards/anti-bird-spikes-installation.webp",
+
+]
+
+export const locationImagesForClothHangers = [
+  "/clothhangers/best-cloth-hangers-near-me.webp",
+  "/clothhangers/ceiling-cloth-hangers-near-me.webp",
+  "/clothhangers/ceiling-balcony-cloth-hangers-near-me.webp",
+  "/clothhangers/dry-balcony-cloth-hangers-near-me.webp",
+  "/clothhangers/dry-balcony-cloth-hangers-installation.webp",
+  "/clothhnagers/top-rated-cloth-hangers-installation-near-me.webp"
+];
+
+export const balconyClothHangerImages = [
+  "/clothhangers/cards/ceiling-balcony-cloth-hangers.webp",
+  "/clothhangers/cards/ceiling-cloth-hangers.webp",
+  "/clothhangers/best-ceiling-cloth-hangers.webp",
+  "/clothhangers/dry-balcony-cloth-hangers-installation.webp",
+  "/clothhangers/cards/dry-balcony-cloth-hangers.webp",
+  "/clothhnagers/top-rated-cloth-hangers-installation-near-me.webp"
+
+]
+
+export const locationImagesForArtificialGrass = [
+  "/artificialturf/artificial-grass-for-ramp-near-me-installation.webp",
+  "/artificialturf/artificial-grass-profitional-installation.webp",
+  "/artificialturf/artificial-turf-installation-for-ground-near-me.webp",
+  "/artificialturf/complete-artificial-turf-installation-for-national-ground-near-me.webp",
+  "/artificialturf/complete-artificial-turf-installation-for-national-ground-near-me.webp",
+    "/artificial/artificial-turf-grass-installation-for-garden.webp",
+  "/artificialturf/artificial-turf-grass-material-properties.webp"
+]
+
+export const artificialGrassProductImages= [
+  "/artificialturf/artificial-grass-profitional-installation.webp", 
+  "/artificialturf/cards/artificial-turf-for-garden.webp",
+  "/artificialturf/cards/artificial-grass-for-ramp.webp",
+  "/artificialturf/artificial-turf-installation-for-ground-near-me.webp",
+  "/artificialturf/complete-artificial-turf-installation-for-national-ground-near-me.webp",
+    "/artificialturf/cards/artificial-grass-material-properties.webp",
+  "/artificialturf/ground-top-rated-artificial-turf-installation.webp"
 
 ]

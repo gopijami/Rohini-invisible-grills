@@ -82,7 +82,7 @@ export const services: Service[] = [
   },
   {
     title: "Cloth Hangers",
-    slug: "balcony-cloth-hangers-installation",
+    slug: "cloth-hangers",
     image: "/cards/cloth-hungers-instllations-near-me.webp",
     price: "₹1500",
     offerPrice: "5% off",
