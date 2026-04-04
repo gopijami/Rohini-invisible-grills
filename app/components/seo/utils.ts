@@ -279,16 +279,16 @@ export const locationImagesForClothHangers = [
   "/clothhangers/ceiling-balcony-cloth-hangers-near-me.webp",
   "/clothhangers/dry-balcony-cloth-hangers-near-me.webp",
   "/clothhangers/dry-balcony-cloth-hangers-installation.webp",
-  "/clothhnagers/top-rated-cloth-hangers-installation-near-me.webp"
+  "/clothhangers/top-rated-cloth-hangers-installation-near-me.webp"
 ];
 
 export const balconyClothHangerImages = [
+  "/clothhangers/top-rated-cloth-hangers-installation-near-me.webp",
   "/clothhangers/cards/ceiling-balcony-cloth-hangers.webp",
   "/clothhangers/cards/ceiling-cloth-hangers.webp",
-  "/clothhangers/best-ceiling-cloth-hangers.webp",
+  "/clothhangers/best-cloth-hangers-near-me.webp",
   "/clothhangers/dry-balcony-cloth-hangers-installation.webp",
   "/clothhangers/cards/dry-balcony-cloth-hangers.webp",
-  "/clothhnagers/top-rated-cloth-hangers-installation-near-me.webp"
 
 ]
 
@@ -312,3 +312,21 @@ export const artificialGrassProductImages= [
   "/artificialturf/ground-top-rated-artificial-turf-installation.webp"
 
 ]
+export const locationImagesForAntiBirdNetInstallation = [
+  "/birdnet/anti-bird-nets-installation.webp",
+  "/birdnet/balocny-safety-nets-installation.webp",
+  "/birdnet/monkey-safety-nets.webp",
+  "/birdnet/transparabt-net-installation.webp",
+  "/birdnet/window-safety-nets-installation.webp",
+];
+
+
+
+export const BalconySafetyAntiBirdNetInstallation = [
+  "/birdnet/cards/anti-bird-net.webp",
+  "/birdnet/cards/balcony-safety-nets-near-me.webp",
+  "/birdnet/transparabt-net-installation.webp",
+  "/birdnet/cards/window-safety-nets.webp",
+  "/birdnet/monkey-safety-nets.webp",
+];
+

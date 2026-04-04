@@ -19,7 +19,7 @@ export default function DropdownClient() {
 
   return (
     <div
-      className="relative "
+      className="relative  "
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >

@@ -10,10 +10,10 @@ type MapSectionProps = {
 
 const MapSection: React.FC<MapSectionProps> = ({ area }) => {
    const city = locationsMatch[area] ? locationsMatch[area] : "Hyderabad";
-   useEffect(() => {
-   console.log(city,locationsMatch[area],area)
+  //  useEffect(() => {
+  //  console.log(city,locationsMatch[area],area)
 
-   })
+  //  })
   return (
    <section className="w-full md:w-[80%] h-80 md:h-96 my-12 mx-auto">
   <iframe

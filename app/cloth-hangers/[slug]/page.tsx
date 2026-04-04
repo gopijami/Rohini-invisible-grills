@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { hyderabadLocations } from "../../components/constants/locations";
+import { combineBengaloreLocations, hyderabadLocations } from "../../components/constants/locations";
 import {
   locationHash,
   slugify,
@@ -150,7 +150,7 @@ export async function generateMetadata({
 }
 
 
-const locations = [...hyderabadLocations, ...hyderabadOtherLocations];
+const locations = [...hyderabadLocations , ...hyderabadOtherLocations,...combineBengaloreLocations];
 
 const separator = (service: string): string => {
   const parts = service.split("/");
@@ -470,7 +470,7 @@ export default function Page({
             </div>
 
             {/* CONDITIONAL IMAGE (PRICE / NEAR ME SECTION) */}
-            {section.heading.includes("Cloth Hanger Price near me in") && (
+            {section.heading.includes("How Cloth Hangers Improve Drying Efficiency") && (
 
               <div className="relative w-full h-[260px] md:h-[460px] my-6 rounded-xl overflow-hidden">
 

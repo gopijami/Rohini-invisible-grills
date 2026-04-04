@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { hyderabadLocations } from "../../components/constants/locations";
+import { combineBengaloreLocations, hyderabadLocations } from "../../components/constants/locations";
 
 import {
   locationHash,
@@ -150,7 +150,7 @@ export async function generateMetadata({
   };
 }
 
-const locations = [...hyderabadLocations, ...hyderabadOtherLocations];
+const locations = [...hyderabadLocations , ...hyderabadOtherLocations,...combineBengaloreLocations]
 
 const separator = (service: string): string => {
   const parts = service.split("/");

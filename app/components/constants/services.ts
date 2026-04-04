@@ -1,3 +1,5 @@
+import { title } from "node:process";
+
 export const services = [
   {
     title: "Invisible Grills",
@@ -27,5 +29,20 @@ export const services = [
     title: "Bird Spikes Installation",
     slug: "bird-spikes-installation",
   },
+
+  {
+    title: "Artificial Grass Turf",
+    slug: "artificial-grass-turf",
+  },
+
+  {
+    title: "Cloth Hangers",
+    slug: "cloth-hangers"
+  }
+  ,
+  {
+    title: "Anti Bird Net Installation",
+    slug: "anti-bird-net-installation",
+  }
   
 ]
