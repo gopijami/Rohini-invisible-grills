@@ -10,24 +10,23 @@ const serviceCoreKeywords = [
 ];
 
 const intentModifiers = [
-  "near me",
+  "local",
   "installation",
   "price",
   "cost",
   "services",
   "providers",
   "company",
-  "best",
-  "low cost",
-  "installation experts",
+  "site check",
+  "site visit",
 ];
 
 const buyerIntentKeywords = [
   "book installation",
-  "free site visit",
-  "same day installation",
-  "professional installers",
-  "trusted service",
+  "site check",
+  "scheduled installation",
+  "installation team",
+  "local service",
 ];
 
 export function generateLocationKeywords(
@@ -47,12 +46,12 @@ export function generateLocationKeywords(
     });
   });
 
-  // Buyer intent
+  // Buyer questions
   buyerIntentKeywords.forEach((intent) => {
     keywords.add(`${intent} anti bird invisible grills ${location}`);
   });
 
-  // Nearby authority signals (VERY POWERFUL)
+  // Nearby context for location pages.
   nearbyLocations.slice(0, 5).forEach((nearby) => {
     keywords.add(`anti bird invisible grills near ${nearby}`);
   });

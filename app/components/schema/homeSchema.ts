@@ -4,7 +4,6 @@ import { localBusinessSchema } from "./localBusiness";
 // Product rich snippet schema is intentionally disabled.
 // import { productSchema } from "./product";
 import { serviceSchema } from "./service";
-import { offerSchema } from "./offer";
 import { webpageSchema } from "./webpage";
 import { breadcrumbSchema } from "./breadcrumb";
 import { imageSchema } from "./image";
@@ -34,7 +33,6 @@ serviceName: string,
     // Product rich snippet schema disabled to avoid product-snippet policy issues.
     // productSchema(serviceName,serviceSlug,location, url,galleryImages),
     serviceSchema(serviceName,serviceSlug,location, url),
-    offerSchema(location,serviceName,url),
     webpageSchema(serviceName,serviceSlug,location, url),
     breadcrumbSchema(serviceName,serviceSlug,location,url),
     // Review/rating rich snippet schema disabled until verified first-party reviews are available.

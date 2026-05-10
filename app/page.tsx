@@ -49,7 +49,7 @@ const homeUrl = "https://rohiniinvisiblegrills.com/";
 const homeImage = "/images/invisible-grill-for-balcony.webp";
 const primaryKeyword = `Invisible Grills in ${location}`;
 const homeTitle = `Invisible Grills ${location} | Balcony Safety | Rohini`;
-const homeDescription = `Rohini Invisible Grills installs balcony safety grills, bird protection nets, and window safety systems in ${location} with free site visits.`;
+const homeDescription = `Rohini Invisible Grills installs balcony safety grills, bird protection nets, and window safety systems in ${location} with site-measured guidance.`;
 
 export const metadata: Metadata = {
   title: homeTitle,
@@ -104,7 +104,7 @@ const galleryImages = [
   "/images/children-safety-invisible-grills-for-balcony.webp",
   "/cards/stainless-steel-invisible-grill.webp",
   "/images/invisible-grill-for-balcony.webp",
-  "/images/apartment-balcony-invisible-grills-near-me-in-hyderabad.webp",
+  "/images/apartment-balcony-invisible-grills-hyderabad.webp",
   "/images/sport-nets-installation-hyderabad.webp",
 ];
 
@@ -120,7 +120,7 @@ export default function Home() {
       <link
         rel="preload"
         as="image"
-        href="/cards/balcony-safety-invisible-grills-installation-near-me.webp"
+        href="/cards/balcony-safety-invisible-grills-installation.webp"
         media="(max-width: 767px)"
         fetchPriority="high"
       />

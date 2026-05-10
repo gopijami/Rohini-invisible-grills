@@ -23,10 +23,10 @@ import {
 } from "../components/constants/locations"
 
 const trustPoints = [
-  "Warranty Support",
+  "After-installation Guidance",
   "304 Grade Stainless Steel",
-  "Free Site Visit",
-  "Same Day Quotation",
+  "Site Check Before Scope",
+  "Quote After Measurement",
 ]
 
 const hyderabadBranches = [
@@ -160,7 +160,7 @@ export default function ContactPageClient() {
 
             <div className="space-y-4">
               <h1 className="max-w-3xl text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl">
-                Contact Rohini Invisible Grills for premium balcony, window, and safety solutions.
+                Contact Rohini Invisible Grills for balcony, window, and safety installation support.
               </h1>
 
               <p className="max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
@@ -287,7 +287,7 @@ export default function ContactPageClient() {
           <div id="quote" className="rounded-[34px] border border-orange-100 bg-white p-6 shadow-2xl shadow-orange-100/70 sm:p-8">
             <div className="mb-6">
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-orange-500">
-                Free Quote
+                Site Quote
               </p>
               <h2 className="mt-2 text-3xl font-bold text-slate-900">
                 Tell us what you need.

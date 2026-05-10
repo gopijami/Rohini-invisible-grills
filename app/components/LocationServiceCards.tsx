@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, MapPin, Star } from "lucide-react";
+import { ArrowUpRight, MapPin } from "lucide-react";
 import { services as productServices } from "./data/productServices";
 import { getRelatedServices } from "./constants/internalLinking";
 import { slugify } from "./seo/utils";
@@ -13,17 +13,21 @@ type Props = {
 };
 
 const badgeColors: Record<string, string> = {
-  "Best Seller": "bg-green-600",
   "Most Visited": "bg-blue-600",
-  "Top Rated": "bg-purple-600",
-  "Hot Deal": "bg-red-600",
-  "Best Deal": "bg-orange-500",
   Popular: "bg-indigo-600",
   Recommended: "bg-teal-600",
   "Pet Safe": "bg-pink-600",
-  "Budget Friendly": "bg-yellow-500 text-black",
   "Space Saver": "bg-gray-700",
-  "Top Choice": "bg-emerald-600",
+  "Balcony Fit": "bg-green-700",
+  "Family Safety": "bg-blue-700",
+  "Bird Route Check": "bg-purple-700",
+  "Sports Use": "bg-red-700",
+  "Window Fit": "bg-indigo-700",
+  "Child Safety": "bg-teal-700",
+  "Pet Planning": "bg-pink-700",
+  "Ledge Check": "bg-yellow-600 text-black",
+  "Surface Prep": "bg-orange-700",
+  "Bird Entry Check": "bg-emerald-700",
 };
 
 export default function LocationServiceCards({ serviceSlug, location }: Props) {
@@ -36,8 +40,7 @@ export default function LocationServiceCards({ serviceSlug, location }: Props) {
         image: serviceMeta?.image ?? "/images/invisible-grill.webp",
         description:
           serviceMeta?.description ??
-          `Explore ${service.title.toLowerCase()} installation services in ${location} with premium materials and expert fitting.`,
-        rating: serviceMeta?.rating ?? 4.8,
+          `Explore ${service.title.toLowerCase()} installation services in ${location} with material guidance and site-measured fitting.`,
         badge: serviceMeta?.badge ?? "Recommended",
         href: `/${service.slug}/${slugify(location)}`,
       };
@@ -86,13 +89,6 @@ export default function LocationServiceCards({ serviceSlug, location }: Props) {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/10 to-transparent" />
 
                 <div className="absolute left-4 top-4 flex items-center gap-2">
-                  <span className="rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-slate-900 shadow-sm">
-                    <span className="inline-flex items-center gap-1">
-                      <Star size={12} className="fill-yellow-400 text-yellow-400" />
-                      {service.rating.toFixed(1)}
-                    </span>
-                  </span>
-
                   {service.badge && (
                     <span
                       className={`rounded-full px-3 py-1 text-[11px] font-semibold text-white shadow-sm ${badgeColors[service.badge] ?? "bg-slate-800"}`}

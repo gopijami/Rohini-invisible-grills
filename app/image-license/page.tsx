@@ -162,7 +162,7 @@ export default function ImageLicensePage() {
       </section>
 
       <p className="mt-10 font-medium text-center">
-        Safe Balconies. Clear Views. Professional Installation.
+        Safe Balconies. Clear Views. Site-Read Fitting.
       </p>
     </main>
   );

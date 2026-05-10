@@ -106,7 +106,7 @@ export default function ReturnPolicyPage() {
             </h2>
             <p className="leading-relaxed text-gray-600">
               Installation dates are scheduled based on availability and site
-              readiness. Customers must ensure the site is accessible and
+              readiness. Customers must help the site is accessible and
               prepared. Delays caused due to site conditions are not the
               responsibility of the company.
             </p>

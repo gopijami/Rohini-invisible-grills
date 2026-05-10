@@ -40,18 +40,18 @@ export const  generateService : (location: string, locations: string[], index: n
 
     {
       question:`What is the price of invisible grills in ${location}?`,
-      answer:`The price depends on balcony size and installation design. Rohini Invisible Grills provides affordable installation services in ${location}.`
+      answer:`The price depends on balcony size and installation design. Rohini Invisible Grills provides cost-aware installation services in ${location}.`
     },
     {
       question: `Are invisible grills safe for children in ${location}?`,
-      answer: `Yes. Invisible grills installed in ${location} provide strong balcony protection and help prevent accidental falls.`
+      answer: `Yes. Invisible grills installed in ${location} provide strong balcony protection and help reduce fall-risk concerns.`
     },
     {
       question: `Do invisible grills block the outside view in ${location}?`,
       answer: `No. The stainless steel wires are thin and almost invisible, so they keep the outside view clear.`
     },
     {
-      question: `Can invisible grills stop pigeons in ${location}?`,
+      question: `Can invisible grills help reduce pigeon entry in ${location}?`,
       answer: `Yes. Invisible grills create a barrier that prevents birds from entering balconies or nesting.`
     },
     {
@@ -85,7 +85,7 @@ export const  generateService : (location: string, locations: string[], index: n
 
     title: `Invisible Grills in ${location} | Balcony Safety Invisible Grill Installation`,
 
-    shortDescription: `Rohini Invisible Grills provides professional invisible grill installation in ${location}. Our balcony safety grills protect children, stop pigeons, and keep your home safe while maintaining a modern open view.`,
+    shortDescription: `Rohini Invisible Grills provides careful invisible grill installation in ${location}. Our balcony safety grills add a safety barrier for children, help reduce pigeon entry, and keep your home safe while maintaining a modern open view.`,
 
     heroImage: "/images/invisible-grill-for-balcony.webp",
 
@@ -109,12 +109,12 @@ export const  generateService : (location: string, locations: string[], index: n
       },
 
       {
-        heading: "How Invisible Grills Help Keep Birds Away",
+        heading: "How Invisible Grills Help discourage bird entry",
         content: birds
       },
 
     {
-        heading: `Invisible Grill Price near me in ${location}`,
+        heading: `Invisible Grill Price in ${location}`,
         content: price
     },
 
@@ -129,17 +129,17 @@ export const  generateService : (location: string, locations: string[], index: n
     },
 
       {
-        heading: "Product Highlights",
+        heading: "Practical Service Notes",
         content: [
   "High tensile stainless steel cables for strong balcony safety",
-  "Premium SS Invisible Grills made with 304 Grade and 316 Grade stainless steel",
-  "Weather resistant, corrosion-proof and rust-proof materials",
-  "Child safety balcony protection for homes and apartments",
-  "Modern minimal design with clear outside view and airflow",
-  "Suitable for balcony safety, anti bird protection, and pigeon safety planning",
-  "Low-maintenance system designed for long-term apartment and home use",
-  "Site-measured fitting with neat hardware alignment",
-  "Professional support for balconies, windows, utility openings, and duct-side safety"
+  "SS 304 and SS 316 choices explained against the actual opening",
+  "Outdoor-use cable and anchor choices discussed before fitting",
+  "Child-safety layer planned around balcony use, furniture, and window access",
+  "Slim cable line that keeps the room-side view light and usable",
+  "Useful when balcony safety and pigeon-entry control overlap",
+  "Easier upkeep for apartment balconies, windows, and utility openings",
+  "Site reading with clean anchor placement and cable alignment",
+  "Careful support for balconies, windows, utility openings, and duct-side safety"
 ]
       },
 
@@ -152,7 +152,7 @@ export const  generateService : (location: string, locations: string[], index: n
           `Residential homes in ${location}`,
           `Office buildings in ${location}`,
           `Windows and duct areas in ${location}`,
-          `Near me invisible grills installation in ${location}`
+          `local invisible grills installation in ${location}`
         ]
       },
       nearbySection,
@@ -166,7 +166,7 @@ export const  generateService : (location: string, locations: string[], index: n
 
       {
         heading: "Conclusion",
-        content: `If you are searching for invisible grills in ${location}, Rohini Invisible Grills provides reliable installation services that improve balcony safety while keeping your home modern and secure.`
+        content: `If you are searching for invisible grills in ${location}, Rohini Invisible Grills checks the opening, explains the fixing line, and fits a clear-view safety layer that suits daily balcony and window use.`
       }
 
     ],
@@ -179,7 +179,7 @@ export const  generateService : (location: string, locations: string[], index: n
 
       title: `Invisible Grills in ${location} | Rohini Invisible Grills`,
 
-      description: `Professional balcony invisible grill installation in ${location}. Improve safety, stop pigeons, and keep your balcony secure with Rohini Invisible Grills.`,
+      description: `Careful balcony invisible grill installation in ${location}. Improve safety, help reduce pigeon entry, and keep your balcony secure with Rohini Invisible Grills.`,
 
       keywords: `invisible grills in ${location}, balcony invisible grills ${location}, anti bird invisible grills, child safety balcony grills, Rohini Invisible Grills`
 

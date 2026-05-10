@@ -1,4 +1,3 @@
-import { servicesCat } from "./localBusiness";
 import { getIds } from "./idGenerator";
 
 /* ---------------- LOCATION DATA ---------------- */
@@ -47,6 +46,9 @@ export const serviceSchema = (
   const locationData = getAddressForLocation(location);
   const locationSlug = location.replace(/\s+/g, "-").toLowerCase();
   const ids = getIds(url, slug, locationSlug);
+  const serviceLabel = /\binstallation\b/i.test(title)
+    ? title.toLowerCase()
+    : `${title.toLowerCase()} installation`;
 
 
   return {
@@ -55,7 +57,7 @@ export const serviceSchema = (
 
     name: `${title} in ${location}`,
 
-    description: `Professional ${title.toLowerCase()} installation service in ${location}. Designed for balcony safety, home protection, and effective bird and pigeon prevention using durable materials.`,
+    description: `Site-measured ${serviceLabel} service in ${location}. Planned for balcony safety, home protection, and reduced bird entry using materials suited to the opening.`,
 
     provider: {
       "@type": "LocalBusiness",
@@ -91,21 +93,8 @@ export const serviceSchema = (
     //   "@id": ids.ratingId,
     // },
 
-    offer: {
-      "@id": ids.offerId,
-    },
-
     mainEntityOfPage: {
       "@id": ids.webpageId,
-        },
-
-    keywords: [
-      title,
-      ...servicesCat,
-      location,
-      "home safety",
-      "balcony protection",
-      "bird control",
-    ].join(", ").toLowerCase(),
+    },
   };
 };

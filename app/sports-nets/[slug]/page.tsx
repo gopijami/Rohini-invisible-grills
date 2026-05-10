@@ -82,7 +82,7 @@ export async function generateMetadata({
   primaryKeyword,
   `Cricket nets installation ${location}`,
   `Box cricket nets ${location}`,
-  `Sports safety nets near me`,
+  `Sports safety nets ${location}`,
   `Playground net installation ${location}`,
   `Terrace cricket nets ${location}`,
   "Rohini Invisible Grills"
@@ -281,34 +281,17 @@ export default function Page({ params }: { params: { slug: string , sections: Se
               __html: jsonLd,
             }}
           />
-
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Service",
-                name: resolvedPage.title,
-                areaServed: resolvedPage.location,
-                additionalProperty: {
-                  "@type": "PropertyValue",
-                  name: "Location Authority Score",
-                  value: page.authorityScore ?? 95,
-                },
-              }),
-            }}
-          />
         </>
       }
       title={resolvedPage.title}
       description={resolvedPage.shortDescription}
       backgroundImage={invisibleGrillImage}
       showcaseImage={`${invisibleGrillImage}?v=${separator(page.slug)}`}
-      showcaseImageAlt={`${serviceName} installation in ${resolvedPage.location}`}
+      showcaseImageAlt={`${serviceName} service in ${resolvedPage.location}`}
       showcaseImageTitle={`${serviceName} in ${resolvedPage.location}`}
       detailImage={`${inProductImage}?v=detail-${separator(page.slug)}-hyderabad-telangana`}
-      detailImageAlt={`${serviceName} installation near ${resolvedPage.location}`}
-      detailImageTitle={`${serviceName} near me in ${resolvedPage.location}`}
+      detailImageAlt={`${serviceName} service in ${resolvedPage.location}`}
+      detailImageTitle={`${serviceName} in ${resolvedPage.location}`}
       serviceName={serviceName}
       location={resolvedPage.location}
       serviceHref={`/services/${serviceSlug}`}
@@ -318,14 +301,14 @@ export default function Page({ params }: { params: { slug: string , sections: Se
       }
       showcaseBadge={
         customPage?.layoutPropsPassedToBrandedServiceLayout?.showcaseBadge ??
-        `${serviceName} Experts`
+        `${serviceName} Installers`
       }
       chips={
         customPage?.layoutPropsPassedToBrandedServiceLayout?.chips ?? [
           serviceName,
-          "Modern Safety",
-          "Weather Resistant",
-          "Professional Installation",
+          "Impact Direction",
+          "Support Line Planning",
+          "Play Area Control",
         ]
       }
       sections={resolvedPage.sections}
@@ -342,7 +325,7 @@ export default function Page({ params }: { params: { slug: string , sections: Se
       }
       ctaDescription={
         customPage?.layoutPropsPassedToBrandedServiceLayout?.ctaDescription ??
-        `Contact Rohini Invisible Grills today for professional installation, premium materials, and a free site visit in ${resolvedPage.location}.`
+        `Ask Rohini Safety Nets to check ball direction, net height, fixing supports, and nearby windows or edges before planning sports nets in ${resolvedPage.location}.`
       }
       afterContent={
         <>

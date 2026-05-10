@@ -14,7 +14,7 @@ export const organizationSchema = {
     "Rohini Sports Nets & Turf for Ground",
   ],
   telephone: "+91-8790518724",
-  priceRange: "15-500",
+  priceRange: "Site-measured quote",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Hyderabad",
@@ -38,8 +38,8 @@ export const organizationSchema = {
 },
 
   image: [
-    "https://rohiniinvisiblegrills.com/images/invisible-grills-installation.webp",
-    "https://rohiniinvisiblegrills.com/images/anti-bird-net-balcony.webp",
+    "https://rohiniinvisiblegrills.com/images/invisible-grills-in-hyderabad.webp",
+    "https://rohiniinvisiblegrills.com/birdnet/anti-bird-nets-installation.webp",
     "https://rohiniinvisiblegrills.com/images/Box-cricket-sports-nets-installation.webp",
     "https://rohiniinvisiblegrills.com/images/invisible-grill.webp",
     "https://rohiniinvisiblegrills.com/images/pigeon-safety-invisible-grills.webp",
@@ -47,9 +47,9 @@ export const organizationSchema = {
   ],
 
   description:
-    "Rohini Invisible Grills is a professional safety solutions brand specializing in invisible grills, balcony protection systems and bird control installations for residential and commercial properties. The company focuses on modern safety designs that maintain open views while improving protection, durability and long-term reliability for urban homes.",
+    "Rohini Invisible Grills is a careful safety solutions brand specializing in invisible grills, balcony protection systems and bird control installations for residential and commercial properties. The company focuses on modern safety designs that maintain open views while improving protection, durability and daily-use reliability for urban homes.",
 
-  slogan: "Safe Balconies. Clear Views. Professional Installation.",
+  slogan: "Safe Balconies. Clear Views. Measured Installation.",
 
   foundingLocation: {
     "@type": "Place",
@@ -112,19 +112,5 @@ knowsAbout: [
   },
 
   sameAs: socialProfileUrls,
-
-  hasCredential: [
-  {
-    "@type": "EducationalOccupationalCredential",
-    name: "Certified Invisible Grill Installation",
-    credentialCategory: "Technical Service Certification"
-  },
-  {
-    "@type": "EducationalOccupationalCredential",
-    name: "Safety Installation Training",
-    credentialCategory: "Professional Training"
-  }
-],
-
   keywords: "invisible grills installation, anti bird net installation, balcony safety solutions, pigeon protection systems, stainless steel cable grills, sports nets installation, bird spikes installation, balcony safety services Hyderabad"
 };

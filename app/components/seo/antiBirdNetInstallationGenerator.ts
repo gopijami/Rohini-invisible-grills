@@ -38,22 +38,22 @@ export const generateAntiBirdNetService:
 
 {
 question:`What is anti bird net installation in ${location}?`,
-answer:`Anti bird net installation is a safety solution where strong nets are fixed on balconies and windows to stop pigeons and birds from entering. It helps keep your home clean and safe.`
+answer:`Anti bird net installation is a safety solution where strong nets are fixed on balconies and windows to help reduce pigeon entry and birds from entering. It helps keep your home clean and safe.`
 },
 
 {
-question:`Do anti bird nets stop pigeons in ${location}?`,
-answer:`Yes. Anti bird nets act as a barrier that prevents pigeons from entering balconies and nesting, helping maintain hygiene and comfort.`
+question:`Do anti bird nets help reduce pigeon entry in ${location}?`,
+answer:`Yes. Anti bird nets act as a barrier that helps reduce pigeon entry from entering balconies and nesting, helping maintain hygiene and comfort.`
 },
 
 {
 question:`Are anti bird nets safe for families in ${location}?`,
-answer:`Yes. These nets protect children and pets from balcony edges while also stopping birds, making them a safe solution for homes.`
+answer:`Yes. These nets add a safety barrier for children and pets from balcony edges while also helping reduce bird entry, making them a practical option for homes.`
 },
 
 {
 question:`What material is used for anti bird nets in ${location}?`,
-answer:`Most anti bird nets are made from high quality nylon or HDPE materials that are strong, durable, and weather-resistant.`
+answer:`Most anti bird nets are made from site-suitable nylon or HDPE materials that are strong, durable, and weather-resistant.`
 },
 
 {
@@ -84,7 +84,7 @@ answer:`No. The nets are designed to be light and less visible, so they allow ai
 
     title: `Anti Bird Net Installation in ${location} | Balcony Safety Nets & Pigeon Control`,
 
-    shortDescription: `Rohini Safety Nets provides anti bird net installation in ${location}. Stop pigeons, prevent nesting, and keep balconies clean with high quality safety nets near you.`,
+    shortDescription: `Rohini Safety Nets provides anti bird net installation in ${location}. help reduce pigeon entry, discourage nesting, and keep balconies clean with site-suitable safety nets in your area.`,
 
     heroImage: "/birdnet/anti-bird-nets-installation.webp",
 
@@ -108,12 +108,12 @@ answer:`No. The nets are designed to be light and less visible, so they allow ai
       },
 
       {
-        heading: "How Anti Bird Nets Stop Pigeons",
+        heading: "How Anti Bird Nets help reduce pigeon entry",
         content: birds
       },
 
       {
-        heading: `Anti Bird Net Installation Price near me in ${location}`,
+        heading: `Anti Bird Net Installation Price in ${location}`,
         content: price
       },
 
@@ -128,18 +128,18 @@ answer:`No. The nets are designed to be light and less visible, so they allow ai
       },
 
       {
-        heading: "Product Highlights",
+        heading: "Practical Service Notes",
         content: [
-          "Anti bird nets designed to stop pigeons and birds safely",
-          "High quality nylon and HDPE nets for strong protection",
+          "Anti bird nets designed to help reduce pigeon entry and birds safely",
+          "site-suitable nylon and HDPE nets for added safety",
           "Effective pigeon safety solution for balconies and windows",
-          "Keeps balcony clean by preventing bird nesting and droppings",
+          "Helps keep balcony corners easier to clean by closing active bird routes",
           "Allows airflow and sunlight without blocking visibility",
           "Acts as balcony safety nets for children and pets",
-          "Weather-resistant and durable materials for long use",
-          "Affordable and practical alternative to grills",
-          "Low maintenance solution for apartments and homes",
-          "Professional installation with strong fixing support"
+          "Outdoor-use net material matched to exposure and fixing access",
+          "cost-aware and practical alternative to grills",
+          "Easier upkeep for apartments, ducts, and utility shafts",
+          "Site reading with tight edge fixing and access planned clearly"
         ]
       },
 
@@ -150,9 +150,9 @@ answer:`No. The nets are designed to be light and less visible, so they allow ai
           `Pigeon safety nets for residential homes in ${location}`,
           `Bird control solutions for high-rise buildings in ${location}`,
           `Window and duct area bird protection nets`,
-          `Balcony pigeon prevention nets near me in ${location}`,
+          `Balcony pigeon prevention nets in ${location}`,
           `Clean balcony solutions for bird problem areas`,
-          `Professional anti bird net installation near me in ${location}`
+          `Careful anti bird net installation in ${location}`
         ]
       },
 
@@ -160,7 +160,7 @@ answer:`No. The nets are designed to be light and less visible, so they allow ai
 
       {
         heading: "Conclusion",
-        content: `If you are searching for anti bird net installation near me in ${location}, Rohini Safety Nets provides reliable and affordable bird protection solutions. Our high quality nets stop pigeons, protect balconies, and keep your home clean while maintaining airflow and comfort.`
+        content: `If you are searching for anti bird net installation in ${location}, Rohini Safety Nets checks the active entry route, duct corners, and fixing points before fitting net coverage that keeps the area usable.`
       }
 
     ],
@@ -174,9 +174,9 @@ answer:`No. The nets are designed to be light and less visible, so they allow ai
 
       title: `Anti Bird Net Installation in ${location} | Rohini Safety Nets`,
 
-      description: `Install anti bird nets in ${location} to stop pigeons and protect balconies. High quality safety nets, pigeon control, and balcony protection near you.`,
+      description: `Install anti bird nets in ${location} to help reduce pigeon entry and protect balconies. site-suitable safety nets, pigeon control, and balcony protection in your area.`,
 
-      keywords: `anti bird net installation ${location}, balcony safety nets ${location}, pigeon nets ${location}, bird control net ${location}, safety nets near me ${location}, pigeon prevention nets ${location}`
+      keywords: `anti bird net installation ${location}, balcony safety nets ${location}, pigeon nets ${location}, bird control net ${location}, safety nets ${location}, pigeon prevention nets ${location}`
 
     },
 

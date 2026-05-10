@@ -3,9 +3,9 @@ import { services } from "./constants/services";
 
 const stats = [
   {
-    value: "15,300+",
-    label: "Homes Protected",
-    detail: "Balconies, windows, and family safety openings",
+    value: "Site",
+    label: "Measured Work",
+    detail: "Balconies, windows, and family safety openings checked before scope",
   },
   {
     value: `${hyderabadLocations.length}+`,
@@ -18,9 +18,9 @@ const stats = [
     detail: "Invisible grills, bird control, nets, and more",
   },
   {
-    value: "4.9/5",
+    value: "Local",
     label: "Customer Focus",
-    detail: "Clean finishing, fast response, and neat fitting",
+    detail: "Clean finishing, practical response, and neat fitting",
   },
 ];
 

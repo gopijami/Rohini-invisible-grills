@@ -48,7 +48,7 @@ answer:`Yes. Cricket practice nets installation helps players train safely by st
 
 {
 question:`Can sports nets be installed at home in ${location}?`,
-answer:`Yes. Many homeowners install sports nets near me solutions to create safe practice zones for children and adults in terraces, backyards, and open spaces.`
+answer:`Yes. Many homeowners install sports nets local solutions to create safe practice zones for children and adults in terraces, backyards, and open spaces.`
 },
 
 {
@@ -86,7 +86,7 @@ answer:`Yes. Sports nets prevent balls from hitting windows, vehicles, or nearby
 
     title: `Sports Nets Installation in ${location} | Cricket Practice & Badminton Court Nets`,
 
-    shortDescription: `Rohini Invisible Grills provides sports nets installation in ${location} including cricket practice nets, box cricket nets, badminton court net installation, and safety net solutions for homes and academies near you.`,
+    shortDescription: `Rohini Invisible Grills provides sports nets installation in ${location} including cricket practice nets, box cricket nets, badminton court net installation, and safety net solutions for homes and academies in your area.`,
 
     heroImage: "/images/sport-nets-installation-hyderabad.webp",
 
@@ -115,7 +115,7 @@ answer:`Yes. Sports nets prevent balls from hitting windows, vehicles, or nearby
       },
 
       {
-        heading: `Sports Nets Installation Price near me in ${location}`,
+        heading: `Sports Nets Installation Price in ${location}`,
         content: price
       },
 
@@ -130,31 +130,31 @@ answer:`Yes. Sports nets prevent balls from hitting windows, vehicles, or nearby
       },
 
       {
-        heading: "Product Highlights",
+        heading: "Practical Service Notes",
         content: [
           "Sports nets designed for cricket practice and badminton courts",
-          "Strong HDPE and nylon materials for long-term outdoor durability",
-          "Cricket practice nets installation near me for safe training",
-          "Box cricket net installation for academies and residential spaces",
-          "Badminton court net installation near me with strong fixing support",
-          "Prevents ball damage to nearby windows and vehicles",
-          "UV-resistant and weatherproof sports net materials",
+          "HDPE and nylon options chosen around impact direction and outdoor exposure",
+          "Cricket practice net planning for controlled training lanes",
+          "Box cricket net planning for academies and residential spaces",
+          "Badminton court net support with fixing points checked first",
+          "Helps reduce ball impact risk around nearby windows and vehicles",
+          "Outdoor-use sports net material matched to sun, rain, and support lines",
           "Supports anti bird nets installation for cleaner play areas",
-          "Low maintenance sports safety solution",
-          "Professional installation for homes, schools, and sports academies"
+          "Easier upkeep for courts, terraces, and practice areas",
+          "Site reading for homes, schools, and sports academies"
         ]
       },
 
       {
         heading: "Applications",
         content: [
-          `Cricket practice nets installation near me in ${location}`,
+          `Cricket practice nets installation in ${location}`,
           `Box cricket net installation for academies in ${location}`,
-          `Badminton court net installation near me in ${location}`,
+          `Badminton court net installation in ${location}`,
           `Terrace and backyard sports nets installation in ${location}`,
           `School and playground safety net systems`,
           `Anti bird nets installation for sports courts`,
-          `Professional sports nets near me service in ${location}`
+          `Careful sports nets local service in ${location}`
         ]
       },
 
@@ -162,7 +162,7 @@ answer:`Yes. Sports nets prevent balls from hitting windows, vehicles, or nearby
 
       {
         heading: "Conclusion",
-        content: `If you are searching for sports nets near me in ${location}, Rohini Invisible Grills provides professional cricket practice nets installation, badminton court nets, and box cricket net installation services. Our strong and durable nets create safe play areas, improve training quality, and protect surrounding spaces while delivering long-lasting performance.`
+        content: `If you are searching for sports nets in ${location}, Rohini Safety Nets checks ball direction, support spacing, net height, and surrounding edges before planning cricket, badminton, box-cricket, or terrace play netting.`
       }
 
     ],
@@ -176,9 +176,9 @@ answer:`Yes. Sports nets prevent balls from hitting windows, vehicles, or nearby
 
       title: `Sports Nets Installation in ${location} | Rohini Invisible Grills`,
 
-      description: `Get sports nets installation in ${location} for cricket practice nets, badminton court nets, and box cricket net installation. Safe and durable sports net solutions near you.`,
+      description: `Get sports nets installation in ${location} for cricket practice nets, badminton court nets, and box cricket net installation. Safe and durable sports net solutions in your area.`,
 
-      keywords: `sports nets ${location}, sports nets near me ${location}, cricket practice nets installation near me ${location}, badminton court net installation near me ${location}, box cricket net installation ${location}, sports safety nets ${location}`
+      keywords: `sports nets ${location}, sports nets ${location}, cricket practice nets installation ${location}, badminton court net installation ${location}, box cricket net installation ${location}, sports safety nets ${location}`
 
     },
 

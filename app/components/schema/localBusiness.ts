@@ -116,14 +116,14 @@ export const localBusinessSchema = (
     "@id": "https://rohiniinvisiblegrills.com/#organization"
   },
 
-  description: `Rohini Invisible Grills offers ${services.join(", ")} services in ${location}, delivering customized balcony safety and bird protection solutions for modern homes and high-rise buildings. Our expert team ensures safe installation, durable materials and long-lasting protection while preserving ventilation and exterior aesthetics.`,
+  description: `Rohini Invisible Grills handles ${services.join(", ")} services in ${location}, with site-measured balcony safety and bird-control installation for homes and apartments. The team checks the opening, fixing surface, daily use, and visual finish before confirming scope.`,
 
   telephone: "+91-8790518724",
-  priceRange: "Rs. 15 - Rs. 500",
+  priceRange: "Site-measured quote",
 
   image: [
-    "https://rohiniinvisiblegrills.com/images/invisible-grills-installation.webp",
-    "https://rohiniinvisiblegrills.com/images/anti-bird-net-balcony.webp",
+    "https://rohiniinvisiblegrills.com/images/invisible-grills-in-hyderabad.webp",
+    "https://rohiniinvisiblegrills.com/birdnet/anti-bird-nets-installation.webp",
     "https://rohiniinvisiblegrills.com/images/Box-cricket-sports-nets-installation.webp",
     "https://rohiniinvisiblegrills.com/images/invisible-grill.webp",
     "https://rohiniinvisiblegrills.com/images/pigeon-safety-invisible-grills.webp",

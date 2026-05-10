@@ -308,34 +308,17 @@ export default function Page({ params }: { params: { slug: string , sections: Se
               __html: jsonLd,
             }}
           />
-
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Service",
-                name: resolvedPage.title,
-                areaServed: resolvedPage.location,
-                additionalProperty: {
-                  "@type": "PropertyValue",
-                  name: "Location Authority Score",
-                  value: resolvedPage.authorityScore,
-                },
-              }),
-            }}
-          />
         </>
       }
       title={resolvedPage.title}
       description={resolvedPage.shortDescription}
       backgroundImage={invisibleGrillImage}
       showcaseImage={`${invisibleGrillImage}?v=${separator(resolvedPage.slug)}`}
-      showcaseImageAlt={`${serviceName} installation in ${resolvedPage.location}`}
+      showcaseImageAlt={`${serviceName} service in ${resolvedPage.location}`}
       showcaseImageTitle={`${serviceName} in ${resolvedPage.location}`}
       detailImage={`${inProductImage}?v=detail-${separator(resolvedPage.slug)}-hyderabad-telangana`}
-      detailImageAlt={`${serviceName} installation near ${resolvedPage.location}`}
-      detailImageTitle={`${serviceName} near me in ${resolvedPage.location}`}
+      detailImageAlt={`${serviceName} service in ${resolvedPage.location}`}
+      detailImageTitle={`${serviceName} in ${resolvedPage.location}`}
       serviceName={serviceName}
       location={resolvedPage.location}
       serviceHref={`/services/${serviceSlug}`}
@@ -346,15 +329,15 @@ export default function Page({ params }: { params: { slug: string , sections: Se
       showcaseBadge={
         customPage?.layoutPropsPassedToBrandedServiceLayout?.showcaseBadge ??
         customPage?.resolvedPageData.showcaseBadge ??
-        `${serviceName} Experts`
+        `${serviceName} Installers`
       }
       chips={
         customPage?.layoutPropsPassedToBrandedServiceLayout?.chips ??
         customPage?.resolvedPageData.chips ?? [
           serviceName,
-          "Modern Safety",
-          "Weather Resistant",
-          "Professional Installation",
+          "Low Sill Safety",
+          "Air & Light Retained",
+          "Frame-Side Fixing",
         ]
       }
       sections={resolvedPage.sections}
@@ -374,7 +357,7 @@ export default function Page({ params }: { params: { slug: string , sections: Se
       ctaDescription={
         customPage?.layoutPropsPassedToBrandedServiceLayout?.ctaDescription ??
         customPage?.resolvedPageData.cta?.description ??
-        `Contact Rohini Invisible Grills today for professional installation, premium materials, and a free site visit in ${resolvedPage.location}.`
+        `Ask Rohini Invisible Grills to check the frame, sill depth, curtain movement, and outside ledge condition before planning window invisible grills in ${resolvedPage.location}.`
       }
       afterContent={
         <>

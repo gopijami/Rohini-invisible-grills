@@ -117,37 +117,20 @@ export function HyderabadCityServicePage({
               __html: JSON.stringify(breadcrumbs),
             }}
           />
-
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Service",
-                name: `${content.serviceName} in ${location}`,
-                areaServed: location,
-                additionalProperty: {
-                  "@type": "PropertyValue",
-                  name: "Location Authority Score",
-                  value: authorityScore,
-                },
-              }),
-            }}
-          />
         </>
       }
       title={`${content.serviceName} in ${location} | Rohini Invisible Grills`}
       description={content.sections[0]?.content}
       backgroundImage={content.galleryImages[0]}
       showcaseImage={`${content.galleryImages[0]}?v=hyderabad-city`}
-      showcaseImageAlt={`${content.serviceName} installation in ${location}`}
+      showcaseImageAlt={`${content.serviceName} service in ${location}`}
       showcaseImageTitle={`${content.serviceName} in ${location}`}
       detailImage={
         content.galleryImages[1]
           ? `${content.galleryImages[1]}?v=detail-hyderabad-city`
           : undefined
       }
-      detailImageAlt={`${content.serviceName} installation near ${location}`}
+      detailImageAlt={`${content.serviceName} service near ${location}`}
       detailImageTitle={`${content.serviceName} near me in ${location}`}
       serviceName={content.serviceName}
       location={location}

@@ -98,7 +98,7 @@ export async function generateMetadata({
           `Balcony cloth hanger ${location}`,
           `Ceiling cloth hanger ${location}`,
           `Drying rack installation ${location}`,
-          `Cloth hanger near me`,
+          `Cloth hanger ${location}`,
           `Cloth hanger Telangana`,
           "Rohini Cloth Hangers",
         ])
@@ -291,46 +291,29 @@ export default function Page({
             dangerouslySetInnerHTML={{
               __html: jsonLd,
             }}
-          />
-
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Service",
-                name: activeTitle,
-                areaServed: activeLocation,
-                additionalProperty: {
-                  "@type": "PropertyValue",
-                  name: "Location Authority Score",
-                  value: page.authorityScore,
-                },
-              }),
-            }}
-          />
+          />
         </>
       }
       title={activeTitle}
       description={activeShortDescription}
       backgroundImage={hangerImage}
       showcaseImage={`${hangerImage}?v=${separator(activeSlug)}`}
-      showcaseImageAlt={`${serviceName} installation in ${activeLocation}`}
+      showcaseImageAlt={`${serviceName} service in ${activeLocation}`}
       showcaseImageTitle={`${serviceName} in ${activeLocation}`}
       detailImage={`${inProductImage}?v=detail-${separator(activeSlug)}-hyderabad-telangana`}
-      detailImageAlt={`${serviceName} installation near ${activeLocation}`}
-      detailImageTitle={`${serviceName} near me in ${activeLocation}`}
+      detailImageAlt={`${serviceName} service in ${activeLocation}`}
+      detailImageTitle={`${serviceName} in ${activeLocation}`}
       serviceName={serviceName}
       location={activeLocation}
       serviceHref={`/services/${serviceSlug}`}
       serviceLabel={activeLayout?.serviceLabel ?? `${serviceName} in ${activeLocation}`}
-      showcaseBadge={activeLayout?.showcaseBadge ?? `${serviceName} Experts`}
+      showcaseBadge={activeLayout?.showcaseBadge ?? `${serviceName} Installers`}
       chips={
         activeLayout?.chips ?? [
           serviceName,
-          "Modern Safety",
-          "Weather Resistant",
-          "Professional Installation",
+          "Laundry Flow",
+          "Load-Aware Fixing",
+          "Utility Space Planning",
         ]
       }
       sections={activeSections}
@@ -344,7 +327,7 @@ export default function Page({
       ctaTitle={activeLayout?.ctaTitle ?? `Need ${serviceName} in ${activeLocation}?`}
       ctaDescription={
         activeLayout?.ctaDescription ??
-        `Contact Rohini Invisible Grills today for professional installation, premium materials, and a free site visit in ${activeLocation}.`
+        `Ask Rohini Invisible Grills to check ceiling or wall strength, daily drying load, reach height, and movement space before fitting cloth hangers in ${activeLocation}.`
       }
       afterContent={
         <>

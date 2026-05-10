@@ -123,7 +123,7 @@ export default function ServicesPage() {
         </div>
 
         <div className="mt-8 flex flex-wrap gap-3 text-sm font-semibold text-emerald-50">
-          {["Free site visit", "304 grade wire options", "Balcony and window safety", "Bird protection"].map((item) => (
+          {["Site check before scope", "304 grade wire options", "Balcony and window safety", "Bird-entry reduction"].map((item) => (
             <span
               key={item}
               className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2"
@@ -152,7 +152,7 @@ export default function ServicesPage() {
               </h2>
               <p className="mt-4 min-h-[84px] text-sm leading-7 text-slate-600">
                 {serviceDescriptions[service.slug] ??
-                  "Professional installation service by Rohini Invisible Grills."}
+                  "site-read service by Rohini Invisible Grills."}
               </p>
               <span className="mt-6 inline-flex items-center gap-2 rounded-full bg-emerald-950 px-5 py-3 text-sm font-semibold text-white transition group-hover:bg-emerald-700">
                 View service

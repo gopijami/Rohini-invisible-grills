@@ -4,7 +4,7 @@ type VariantFn = (loc: string) => string;
 
 export const overviewVariants: VariantFn[] = [
 
-(loc)=>`Homeowners searching artificial grass turf near me in ${loc} often want a green, low-maintenance surface that looks natural all year. Artificial turf is widely used for balconies, terraces, gardens, and play areas, offering a clean and comfortable space without the need for regular watering or upkeep.`,
+(loc)=>`Homeowners searching artificial grass turf in ${loc} often want a green, low-maintenance surface that looks natural all year. Artificial turf is widely used for balconies, terraces, gardens, and play areas, offering a clean and comfortable space without the need for regular watering or upkeep.`,
 
 (loc)=>`In ${loc}, artificial grass turf is becoming a popular choice for creating green spaces in homes and commercial areas. These surfaces provide a fresh appearance while eliminating the effort required for maintaining natural grass, making them ideal for modern lifestyles.`,
 
@@ -14,15 +14,15 @@ export const overviewVariants: VariantFn[] = [
 
 (loc)=>`Residents across ${loc} are choosing artificial grass turf to create relaxing green spaces at home. Whether used in balconies or gardens, it offers a soft, natural feel while remaining clean and easy to manage.`,
 
-(loc)=>`Modern properties in ${loc} are upgrading with artificial turf to achieve a green look without maintenance challenges. These installations provide long-lasting beauty while supporting everyday usability in different spaces.`,
+(loc)=>`Modern properties in ${loc} are upgrading with artificial turf to achieve a green look without maintenance challenges. These installations provide steady beauty while supporting everyday usability in different spaces.`,
 
-(loc)=>`Families searching artificial grass near me in ${loc} prefer turf that combines comfort and durability. It provides a safe and clean surface for children and pets while maintaining a fresh appearance throughout the year.`,
+(loc)=>`Families searching artificial grass in ${loc} prefer turf that combines comfort and durability. It provides a safe and clean surface for children and pets while maintaining a fresh appearance throughout the year.`,
 
 (loc)=>`Artificial grass turf is widely used in ${loc} for improving outdoor aesthetics and usability. It creates a structured and clean environment while requiring minimal effort to maintain its look.`,
 
-(loc)=>`In ${loc}, artificial turf solutions help transform dull spaces into vibrant green areas. These systems are designed to provide consistent appearance and long-term performance.`,
+(loc)=>`In ${loc}, artificial turf solutions help transform dull spaces into vibrant green areas. These systems are designed to provide consistent appearance and steady performance.`,
 
-(loc)=>`Searching artificial grass turf near me in ${loc} leads to solutions that improve both visual appeal and practicality. Turf installations create comfortable, low-maintenance spaces for everyday use.`
+(loc)=>`Searching artificial grass turf in ${loc} leads to solutions that improve both visual appeal and practicality. Turf installations create comfortable, low-maintenance spaces for everyday use.`
 
 ];
 
@@ -31,15 +31,15 @@ export const overviewVariants: VariantFn[] = [
 
 export const aboutVariants: VariantFn[] = [
 
-(loc)=>`Rohini Artificial Grass provides high-quality turf installation services in ${loc} designed to enhance both indoor and outdoor spaces. Our solutions focus on creating natural-looking green areas that remain fresh and usable throughout the year.`,
+(loc)=>`Rohini Artificial Grass provides site-suitable turf installation services in ${loc} designed to enhance both indoor and outdoor spaces. Our solutions focus on creating natural-looking green areas that remain fresh and usable throughout the year.`,
 
-(loc)=>`Serving ${loc}, Rohini Artificial Grass delivers reliable turf solutions that combine visual appeal with long-term performance. Our installations are tailored to suit balconies, terraces, gardens, and commercial spaces.`,
+(loc)=>`Serving ${loc}, Rohini Artificial Grass delivers reliable turf solutions that combine visual appeal with steady performance. Our installations are tailored to suit balconies, terraces, gardens, and commercial spaces.`,
 
-(loc)=>`Customers in ${loc} searching artificial grass near me trust Rohini Artificial Grass for consistent quality and professional installation. Our turf systems are designed to maintain their look while supporting everyday use.`,
+(loc)=>`Customers in ${loc} searching artificial grass local contact Rohini Artificial Grass for consistent quality and Measured installation. Our turf systems are designed to maintain their look while supporting everyday use.`,
 
 (loc)=>`At Rohini Artificial Grass, we help clients in ${loc} transform ordinary spaces into vibrant green environments. Our turf solutions are created to improve comfort, cleanliness, and overall aesthetics.`,
 
-(loc)=>`We provide artificial turf installation in ${loc} with a focus on durability and neat finishing. Each project is completed with attention to detail to ensure a natural and attractive appearance.`,
+(loc)=>`We provide artificial turf installation in ${loc} with a focus on durability and neat finishing. Each project is completed with attention to detail to help a natural and attractive appearance.`,
 
 (loc)=>`Homeowners in ${loc} choose our turf services for creating low-maintenance green areas that remain visually appealing over time.`,
 
@@ -58,19 +58,19 @@ export const aboutVariants: VariantFn[] = [
 
 export const installVariants: VariantFn[] = [
 
-(loc)=>`Artificial grass installation in ${loc} starts with surface preparation and proper measurement to ensure a smooth and even finish. This process helps create a stable base for long-lasting performance.`,
+(loc)=>`Artificial grass installation in ${loc} starts with surface preparation and proper measurement to help a smooth and even finish. This process helps create a stable base for steady performance.`,
 
 (loc)=>`Our installation service in ${loc} includes ground leveling, base layer setup, and secure turf fixing to achieve a natural and clean appearance.`,
 
-(loc)=>`People searching artificial grass turf near me in ${loc} benefit from a structured installation process designed for durability and neat finishing.`,
+(loc)=>`People searching artificial grass turf in ${loc} benefit from a structured installation process designed for durability and neat finishing.`,
 
-(loc)=>`Installation involves preparing the surface, placing underlayers, and fixing the turf properly to ensure stability and comfort.`,
+(loc)=>`Installation involves preparing the surface, placing underlayers, and fixing the turf properly to help stability and comfort.`,
 
-(loc)=>`Families in ${loc} prefer our process because it is efficient and creates minimal disruption while delivering long-lasting results.`,
+(loc)=>`Families in ${loc} prefer our process because it is efficient and creates minimal disruption while delivering steady results.`,
 
-(loc)=>`We ensure proper drainage and alignment during installation so the turf remains clean and usable in all conditions.`,
+(loc)=>`We help proper drainage and alignment during installation so the turf remains clean and usable in all conditions.`,
 
-(loc)=>`Professional installation helps maintain turf quality and ensures it stays in place even with regular use.`,
+(loc)=>`Measured installation helps maintain turf quality and helps it stays in place even with regular use.`,
 
 (loc)=>`Our team completes most installations quickly, allowing immediate use of the newly created green space.`,
 
@@ -112,25 +112,25 @@ export const birdVariants: VariantFn[] = [
 
 export const priceVariants: VariantFn[] = [
 
-(loc)=>`The price of artificial grass turf in ${loc} depends on turf quality, area size, and installation requirements. High-grade materials ensure durability and long-term value.`,
+(loc)=>`The price of artificial grass turf in ${loc} depends on turf quality, area size, and installation requirements. High-grade materials help durability and daily-use value.`,
 
-(loc)=>`Customers searching artificial grass price near me in ${loc} receive detailed quotes based on their space and customization needs.`,
+(loc)=>`Customers searching artificial grass price in ${loc} receive detailed quotes based on their space and customization needs.`,
 
-(loc)=>`Costs may vary depending on design and usage, but turf remains a cost-effective solution for long-term greenery.`,
+(loc)=>`Costs may vary depending on design and usage, but turf remains a cost-effective solution for daily-use greenery.`,
 
 (loc)=>`We offer competitive pricing for artificial turf installations without compromising quality.`,
 
 (loc)=>`Pricing includes materials, preparation, and installation services.`,
 
-(loc)=>`Artificial grass is a long-term investment that reduces maintenance costs.`,
+(loc)=>`Artificial grass is a daily-use investment that reduces maintenance costs.`,
 
 (loc)=>`Ongoing expenses remain low compared to natural lawn care.`,
 
-(loc)=>`Affordable options are available for different budgets and space sizes.`,
+(loc)=>`cost-aware options are available for different budgets and space sizes.`,
 
 (loc)=>`Final cost depends on area dimensions and installation complexity.`,
 
-(loc)=>`Customers benefit from long-lasting greenery and reduced upkeep costs.`
+(loc)=>`Customers benefit from steady greenery and reduced upkeep costs.`
 
 ];
 
@@ -139,17 +139,17 @@ export const priceVariants: VariantFn[] = [
 
 export const whyChooseVariants: VariantFn[] = [
 
-(loc)=>`Residents in ${loc} choose Rohini Artificial Grass for artificial grass near me searches due to quality materials and reliable installation services.`,
+(loc)=>`Residents in ${loc} choose Rohini Artificial Grass for artificial grass local searches due to quality materials and reliable installation services.`,
 
-(loc)=>`Our turf solutions provide natural appearance with long-lasting durability.`,
+(loc)=>`Our turf solutions provide natural appearance with steady durability.`,
 
-(loc)=>`Customers trust us for neat finishing and consistent results.`,
+(loc)=>`Customers often ask us for neat finishing and consistent results.`,
 
-(loc)=>`High-quality turf ensures better performance over time.`,
+(loc)=>`site-suitable turf helps better performance over time.`,
 
 (loc)=>`Families prefer our installations for clean and comfortable surfaces.`,
 
-(loc)=>`Experienced teams ensure proper setup and finishing.`,
+(loc)=>`Experienced teams help proper setup and finishing.`,
 
 (loc)=>`Transparent pricing builds customer confidence.`,
 
@@ -166,9 +166,9 @@ export const whyChooseVariants: VariantFn[] = [
 
 export const safetyTipsVariants: VariantFn[] = [
 
-(loc)=>`Homes in ${loc} should install artificial grass turf properly to ensure even surfaces and safe usage.`,
+(loc)=>`Homes in ${loc} should install artificial grass turf properly to help even surfaces and safe usage.`,
 
-(loc)=>`Proper base preparation improves stability and long-term performance.`,
+(loc)=>`Proper base preparation improves stability and steady performance.`,
 
 (loc)=>`Regular cleaning helps maintain hygiene and appearance.`,
 
@@ -180,7 +180,7 @@ export const safetyTipsVariants: VariantFn[] = [
 
 (loc)=>`Good drainage helps maintain turf quality.`,
 
-(loc)=>`Periodic inspection ensures durability.`,
+(loc)=>`Periodic inspection helps durability.`,
 
 (loc)=>`Modern homes in ${loc} benefit from structured turf setups.`,
 

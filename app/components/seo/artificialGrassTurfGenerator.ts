@@ -43,12 +43,12 @@ answer:`Artificial grass turf is a synthetic surface designed to look like natur
 
 {
 question:`Why choose artificial grass turf in ${location}?`,
-answer:`Artificial turf provides a clean, green look without watering, mowing, or maintenance. It is ideal for homes and commercial spaces looking for long-lasting greenery solutions.`
+answer:`Artificial turf gives a green surface without watering or mowing. It suits homes and commercial spaces where natural grass is difficult to care for.`
 },
 
 {
 question:`Is artificial grass suitable for homes in ${location}?`,
-answer:`Yes. Artificial grass is widely used in homes, apartments, and villas for balconies, terraces, and gardens due to its durability and low maintenance.`
+answer:`Yes. Artificial grass is used in homes, apartments, and villas for balconies, terraces, and gardens because it is easier to care for than natural grass.`
 },
 
 {
@@ -58,7 +58,7 @@ answer:`Most artificial grass installations are completed within a day depending
 
 {
 question:`Is artificial grass safe for children and pets in ${location}?`,
-answer:`Yes. High-quality artificial turf is soft, safe, and comfortable, making it suitable for children and pets to play on.`
+answer:`Yes. site-suitable artificial turf is soft, safe, and comfortable, making it suitable for children and pets to play on.`
 },
 
 {
@@ -84,7 +84,7 @@ answer:`Artificial grass requires minimal maintenance such as occasional cleanin
 
     title: `Artificial Grass Turf in ${location} | Lawn & Balcony Turf Installation`,
 
-    shortDescription: `Rohini Artificial Grass provides artificial grass turf installation in ${location}. Transform balconies, terraces, and gardens with low-maintenance green lawn solutions near you.`,
+    shortDescription: `Rohini Artificial Grass provides artificial grass turf installation in ${location}. Transform balconies, terraces, and gardens with low-maintenance green lawn solutions in your area.`,
 
     heroImage: "/images/artificial-grass-and-artificial-turf-for-ground.webp",
 
@@ -113,7 +113,7 @@ answer:`Artificial grass requires minimal maintenance such as occasional cleanin
       },
 
       {
-        heading: `Artificial Grass Turf Price near me in ${location}`,
+        heading: `Artificial Grass Turf Price in ${location}`,
         content: price
       },
 
@@ -128,18 +128,18 @@ answer:`Artificial grass requires minimal maintenance such as occasional cleanin
       },
 
       {
-        heading: "Product Highlights",
+        heading: "Practical Service Notes",
         content: [
           "Natural-looking artificial grass for balconies, terraces, and gardens",
-          "Low maintenance solution with no watering or mowing required",
-          "Durable and weather-resistant turf for long-term use",
-          "Soft and comfortable surface suitable for kids and pets",
-          "Improves outdoor aesthetics with consistent green appearance",
-          "Easy to clean and maintain throughout the year",
-          "Suitable for residential and commercial spaces",
-          "Quick installation with minimal disruption",
-          "Eco-friendly alternative to natural lawns",
-          "Enhances usability of indoor and outdoor areas"
+          "No watering or mowing required after installation",
+          "Outdoor-use turf selected around daily foot traffic",
+          "Soft surface options chosen around children, pets, and foot traffic",
+          "Green finish planned around the actual balcony, terrace, or floor shape",
+          "Cleaning and water movement discussed before the turf is cut",
+          "Useful for homes, play corners, terraces, and display spaces",
+          "Installation planned around access, edge cutting, and base condition",
+          "A practical option where natural grass is difficult to maintain",
+          "Turns dull indoor or outdoor corners into spaces people actually use"
         ]
       },
 
@@ -149,7 +149,7 @@ answer:`Artificial grass requires minimal maintenance such as occasional cleanin
           `Artificial grass for balcony flooring in ${location}`,
           `Terrace garden turf installation in ${location}`,
           `Outdoor lawn solutions for homes in ${location}`,
-          `Artificial grass near me installation in ${location}`,
+          `Artificial grass local installation in ${location}`,
           `Play area turf for children and pets`,
           `Decorative green flooring for indoor spaces`,
           `Commercial landscaping turf solutions in ${location}`
@@ -160,7 +160,7 @@ answer:`Artificial grass requires minimal maintenance such as occasional cleanin
 
       {
         heading: "Conclusion",
-        content: `If you are searching for artificial grass turf near me in ${location}, Rohini Artificial Grass provides high-quality installation services. Our turf solutions create clean, green, and low-maintenance spaces that improve both comfort and appearance for modern homes and businesses.`
+        content: `If you are searching for artificial grass turf in ${location}, Rohini Artificial Grass checks the base, drainage, edge lines, and daily use before fitting turf that makes the space easier to live with.`
       }
 
     ],
@@ -174,9 +174,9 @@ answer:`Artificial grass requires minimal maintenance such as occasional cleanin
 
       title: `Artificial Grass Turf in ${location} | Rohini Artificial Grass`,
 
-      description: `Install artificial grass turf in ${location} for balconies, terraces, and lawns. Low maintenance, natural look, and durable turf solutions near you.`,
+      description: `Install artificial grass turf in ${location} for balconies, terraces, and lawns with base preparation, edge cutting, and water movement checked first.`,
 
-      keywords: `artificial grass ${location}, artificial grass turf ${location}, artificial lawn near me ${location}, balcony grass turf ${location}, terrace grass installation ${location}, synthetic grass ${location}`
+      keywords: `artificial grass ${location}, artificial grass turf ${location}, artificial lawn ${location}, balcony grass turf ${location}, terrace grass installation ${location}, synthetic grass ${location}`
 
     },
 

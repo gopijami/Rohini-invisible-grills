@@ -3,8 +3,12 @@ export const imageSchema = (
   service: string,
   location: string,
   url: string
-) =>
-  images.map((img, index) => ({
+) => {
+  const serviceLabel = /\binstallation\b/i.test(service)
+    ? service
+    : `${service} installation`;
+
+  return images.map((img, index) => ({
     "@type": "ImageObject",
 
     "@id": `${url}#image-${index + 1}`,
@@ -12,7 +16,7 @@ export const imageSchema = (
     contentUrl: `https://rohiniinvisiblegrills.com${img}`,
     url: `https://rohiniinvisiblegrills.com${img}`,
 
-    caption: `${service} installation in ${location} by Rohini Invisible Grills`,
+    caption: `${serviceLabel} in ${location} by Rohini Invisible Grills`,
 
     inLanguage: "en-IN",
 
@@ -45,3 +49,4 @@ export const imageSchema = (
 
     representativeOfPage: index === 0
   }));
+};

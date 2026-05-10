@@ -4,19 +4,19 @@ import { useEffect, useRef, useState } from 'react'
 const heroImages = [
   {
     src: '/images/balcony-invisible-safety-installation.webp',
-    mobileSrc: '/cards/balcony-safety-invisible-grills-installation-near-me.webp',
+    mobileSrc: '/cards/balcony-safety-invisible-grills-installation.webp',
     alt: 'Anti-bird invisible grills in tellapur hyderabad',
-    dec: 'Protect your balcony with strong invisible grills in Tellapur Hyderabad. Keep birds out, kids safe, and enjoy fresh air without compromising view.'
+    dec: 'Plan your balcony with strong invisible grills in Tellapur Hyderabad. Add a safety barrier, reduce bird entry, and keep fresh air without compromising view.'
   },
   {
     src: '/images/invisible-grill.webp',
     alt: 'Invisible stainless steel grills closeup in Hyderabad',
-    dec: 'See our invisible stainless steel grills up close. Stylish, strong, and safe for kids and pets. Perfect for homes needing safety without ugly bars.'
+    dec: 'See invisible stainless steel grills up close. Clean, strong, and suited to homes that need a safety barrier without heavy visible bars.'
   },
   {
     src: '/images/children-safety-invisible-grills-for-balcony.webp',
     alt: 'Durable stainless-steel invisible grills',
-    dec: 'Keep children safe on your balcony with durable invisible grills. Made of stainless steel, these grills are strong, safe, and look elegant too.'
+    dec: 'Add a measured safety barrier to exposed balcony edges with stainless steel invisible grills planned for a clean room-side look.'
   },
 ]
 

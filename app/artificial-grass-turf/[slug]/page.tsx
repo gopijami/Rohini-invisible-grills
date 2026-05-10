@@ -96,7 +96,7 @@ export async function generateMetadata({
         `Balcony grass turf ${location}`,
         `Terrace grass installation ${location}`,
         `Garden turf ${location}`,
-        `Artificial lawn near me`,
+        `Artificial lawn ${location}`,
         `Synthetic grass Telangana`,
         "Rohini Artificial Grass",
       ])
@@ -275,35 +275,18 @@ export default function Page({
             dangerouslySetInnerHTML={{
               __html: jsonLd,
             }}
-          />
-
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Service",
-                name: resolvedPage.title,
-                areaServed: resolvedPage.location,
-                additionalProperty: {
-                  "@type": "PropertyValue",
-                  name: "Location Authority Score",
-                  value: page.authorityScore ?? 95,
-                },
-              }),
-            }}
-          />
+          />
         </>
       }
       title={resolvedPage.title}
       description={resolvedPage.shortDescription}
       backgroundImage={grassImage}
       showcaseImage={`${grassImage}?v=${separator(page.slug)}`}
-      showcaseImageAlt={`${serviceName} installation in ${resolvedPage.location}`}
+      showcaseImageAlt={`${serviceName} service in ${resolvedPage.location}`}
       showcaseImageTitle={`${serviceName} in ${resolvedPage.location}`}
       detailImage={`${inProductImage}?v=detail-${separator(page.slug)}-hyderabad-telangana`}
-      detailImageAlt={`${serviceName} installation near ${resolvedPage.location}`}
-      detailImageTitle={`${serviceName} near me in ${resolvedPage.location}`}
+      detailImageAlt={`${serviceName} service in ${resolvedPage.location}`}
+      detailImageTitle={`${serviceName} in ${resolvedPage.location}`}
       serviceName={serviceName}
       location={resolvedPage.location}
       serviceHref={`/services/${serviceSlug}`}
@@ -313,14 +296,14 @@ export default function Page({
       }
       showcaseBadge={
         customPage?.layoutPropsPassedToBrandedServiceLayout?.showcaseBadge ??
-        `${serviceName} Experts`
+        `${serviceName} Installers`
       }
       chips={
         customPage?.layoutPropsPassedToBrandedServiceLayout?.chips ?? [
           serviceName,
-          "Modern Safety",
-          "Weather Resistant",
-          "Professional Installation",
+          "Surface Prep",
+          "Drainage-Aware Fit",
+          "Balcony & Terrace Use",
         ]
       }
       sections={resolvedPage.sections}
@@ -337,7 +320,7 @@ export default function Page({
       }
       ctaDescription={
         customPage?.layoutPropsPassedToBrandedServiceLayout?.ctaDescription ??
-        `Contact Rohini Invisible Grills today for professional installation, premium materials, and a free site visit in ${resolvedPage.location}.`
+        `Ask Rohini Artificial Grass to review the floor level, drainage, edge cutting, and daily use of your ${resolvedPage.location} balcony, terrace, or play corner.`
       }
       afterContent={
         <>

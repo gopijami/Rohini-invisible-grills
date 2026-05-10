@@ -4,7 +4,6 @@ import { localBusinessSchema } from "./localBusiness";
 // Product rich snippet schema is intentionally disabled.
 // import { productSchema } from "./product";
 import { serviceSchema } from "./service";
-import { offerSchema } from "./offer";
 import { webpageSchema } from "./webpage";
 import { faqSchema } from "./faq";
 import { breadcrumbSchema } from "./breadcrumb";
@@ -35,7 +34,6 @@ serviceName: string,
     localBusinessSchema(location, url),
     // productSchema(serviceName,serviceSlug,location, url,galleryImages),
     serviceSchema(serviceName,serviceSlug,location, url),
-    offerSchema(location,serviceName,url),
     webpageSchema(serviceName,serviceSlug,location, url),
     faqSchema(faqs, url),
     breadcrumbSchema(serviceName,serviceSlug,location,url),

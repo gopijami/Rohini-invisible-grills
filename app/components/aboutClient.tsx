@@ -26,7 +26,7 @@ const galleryImages = [
     alt: "Balcony invisible grill installation with clear outside view",
   },
   {
-    src: "/images/apartment-balcony-invisible-grills-near-me-in-hyderabad.webp",
+    src: "/images/apartment-balcony-invisible-grills-hyderabad.webp",
     alt: "Apartment balcony invisible grills in Hyderabad",
   },
   {
@@ -48,8 +48,8 @@ export default function AboutClient(){
                   About Rohini Invisible Grills
                 </h1>
                 <p className="max-w-2xl mx-auto text-lg text-gray-600">
-                  We provide premium invisible grill installations designed to enhance
-                  safety, style, and protection for modern homes and apartments.
+                  We provide site-measured invisible grill installations designed
+                  for balcony safety, clean views, and practical bird-control needs.
                 </p>
               </section>
         
@@ -58,14 +58,14 @@ export default function AboutClient(){
                 <div>
                   <h2 className="text-3xl font-semibold mb-4">Who We Are</h2>
                   <p className="text-gray-600 leading-relaxed mb-4">
-                    Rohini Invisible Grills is a trusted name in providing high-quality
-                    safety solutions for residential and commercial spaces. We
-                    specialize in invisible grills that protect your loved ones without
-                    compromising your view.
+                    Rohini Invisible Grills provides balcony, window, and bird-control
+                    installation support for residential and commercial spaces. We
+                    specialize in invisible grills planned around the opening, fixing
+                    surface, and daily use of the property.
                   </p>
                   <p className="text-gray-600 leading-relaxed">
-                    With expert installation and premium materials, we ensure
-                    long-lasting durability, modern design, and complete peace of mind.
+                    Our team discusses material options, measurements, access, and
+                    finish before confirming the final installation scope.
                   </p>
                 </div>
         
@@ -109,22 +109,23 @@ export default function AboutClient(){
                 </h2>
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div className="p-6 border rounded-xl">
-                    <h3 className="font-semibold mb-2">Premium Quality</h3>
+                    <h3 className="font-semibold mb-2">Material Guidance</h3>
                     <p className="text-gray-600 text-sm">
-                      We use high-grade stainless steel for maximum durability and
-                      safety.
+                      We discuss stainless steel options, exposure, and fixing
+                      surfaces before installation.
                     </p>
                   </div>
                   <div className="p-6 border rounded-xl">
-                    <h3 className="font-semibold mb-2">Expert Installation</h3>
+                    <h3 className="font-semibold mb-2">Measured Installation</h3>
                     <p className="text-gray-600 text-sm">
-                      Skilled professionals ensure neat, reliable installation.
+                      The site is checked for alignment, access, and daily-use fit.
                     </p>
                   </div>
                   <div className="p-6 border rounded-xl">
-                    <h3 className="font-semibold mb-2">Affordable Pricing</h3>
+                    <h3 className="font-semibold mb-2">Clear Scope</h3>
                     <p className="text-gray-600 text-sm">
-                      High-quality service at competitive and transparent pricing.
+                      Pricing is explained after measurement, material choice, and
+                      fixing details are understood.
                     </p>
                   </div>
                 </div>
@@ -144,11 +145,11 @@ export default function AboutClient(){
               {/* CTA Section */}
               <section className="bg-[#344A6C] text-white text-center py-12 px-6">
                 <h2 className="text-3xl font-bold mb-4">
-                  Get Your Free Installation Quote Today
+                  Request an Installation Quote
                 </h2>
                 <p className="mb-6">
-                  Contact us now for safe, stylish, and durable invisible grill
-                  solutions.
+                  Share your balcony, window, or bird-control requirement and we
+                  will guide the next site-check step.
                 </p>
                 <a
                   href="tel:8790518724"

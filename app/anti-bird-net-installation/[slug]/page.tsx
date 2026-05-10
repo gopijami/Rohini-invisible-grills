@@ -75,7 +75,7 @@ const url = `https://rohiniinvisiblegrills.com/anti-bird-net-installation/${para
       `Balcony safety nets ${location}`,
       `Pigeon nets installation ${location}`,
       `Bird control nets ${location}`,
-      `Anti bird nets near me ${location}`,
+      `Anti bird nets ${location}`,
       `Cat safety nets balcony ${location}`,
       `Monkey safety nets ${location}`,
       "Rohini Safety Nets",
@@ -276,35 +276,18 @@ export default function Page({ params }: { params: { slug: string, sections: Sec
             dangerouslySetInnerHTML={{
               __html: jsonLd,
             }}
-          />
-
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Service",
-                name: resolvedPage.title,
-                areaServed: resolvedPage.location,
-                additionalProperty: {
-                  "@type": "PropertyValue",
-                  name: "Location Authority Score",
-                  value: page.authorityScore ?? 95,
-                },
-              }),
-            }}
-          />
+          />
         </>
       }
       title={resolvedPage.title}
       description={resolvedPage.shortDescription}
       backgroundImage={invisibleGrillImage}
       showcaseImage={`${invisibleGrillImage}?v=${separator(page.slug)}`}
-      showcaseImageAlt={`${serviceName} installation in ${resolvedPage.location}`}
+      showcaseImageAlt={`${serviceName} service in ${resolvedPage.location}`}
       showcaseImageTitle={`${serviceName} in ${resolvedPage.location}`}
       detailImage={`${inProductImage}?v=detail-${separator(page.slug)}-hyderabad-telangana`}
-      detailImageAlt={`${serviceName} installation near ${resolvedPage.location}`}
-      detailImageTitle={`${serviceName} near me in ${resolvedPage.location}`}
+      detailImageAlt={`${serviceName} service in ${resolvedPage.location}`}
+      detailImageTitle={`${serviceName} in ${resolvedPage.location}`}
       serviceName={serviceName}
       location={resolvedPage.location}
       serviceHref={`/services/${serviceSlug}`}
@@ -314,14 +297,14 @@ export default function Page({ params }: { params: { slug: string, sections: Sec
       }
       showcaseBadge={
         customPage?.layoutPropsPassedToBrandedServiceLayout?.showcaseBadge ??
-        `${serviceName} Experts`
+        `${serviceName} Installers`
       }
       chips={
         customPage?.layoutPropsPassedToBrandedServiceLayout?.chips ?? [
           serviceName,
-          "Modern Safety",
-          "Weather Resistant",
-          "Professional Installation",
+          "Duct & Ledge Coverage",
+          "Tight Net Fixing",
+          "Bird Entry Planning",
         ]
       }
       sections={resolvedPage.sections}
@@ -338,7 +321,7 @@ export default function Page({ params }: { params: { slug: string, sections: Sec
       }
       ctaDescription={
         customPage?.layoutPropsPassedToBrandedServiceLayout?.ctaDescription ??
-        `Contact Rohini Invisible Grills today for professional installation, premium materials, and a free site visit in ${resolvedPage.location}.`
+        `Ask Rohini Safety Nets to check the balcony, duct, ledge, or utility opening in ${resolvedPage.location} and confirm the net coverage before installation.`
       }
       afterContent={
         <>

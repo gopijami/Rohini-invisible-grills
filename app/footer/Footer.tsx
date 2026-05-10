@@ -16,7 +16,7 @@ export default function Footer() {
           </h3>
 
           <p className="text-sm leading-relaxed text-gray-400">
-            Rohini Invisible Grills is a trusted name in modern home safety
+            Rohini Invisible Grills is a practical name in modern home safety
             solutions. We specialize in invisible grills, balcony safety
             protection, and anti-bird systems designed for modern apartments
             and villas.
@@ -129,8 +129,7 @@ export default function Footer() {
       </div>
       <div>
         <p className="text-center text-sm text-gray-400 max-w-4xl mx-auto leading-relaxed px-6">
-          We are committed to providing top-notch invisible grill solutions and <a href="https://www.srinuvasulusafetynets.com/" target="_blank" > balcony safety nets </a> that enhance the safety and aesthetics of your home. Contact us today to learn
-          more about our services or to schedule a consultation.
+          We handle site-measured invisible grill solutions and <a href="https://www.srinuvasulusafetynets.com/" target="_blank" > balcony safety nets </a> for homes that need clearer safety planning, bird-entry reduction, and neat finishing. Contact us to discuss the site before the final scope is confirmed.
         </p>
       </div>
 

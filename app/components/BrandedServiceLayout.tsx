@@ -50,16 +50,16 @@ type Props = {
 };
 
 const defaultChips = [
-  "Premium Installation",
-  "Modern Safety",
-  "Weather Resistant",
-  "Professional Fitting",
+  "Site Read First",
+  "Opening-Specific Scope",
+  "Material Matched to Use",
+  "Clean Fixing Points",
 ];
 
 const defaultStats = [
-  { label: "Process", value: "Site-Measured" },
-  { label: "Materials", value: "SS 304 / 316" },
-  { label: "Service Area", value: "Trusted Local Service" },
+  { label: "Process", value: "Site Read" },
+  { label: "Materials", value: "Scope Based" },
+  { label: "Service Area", value: "Local Visit" },
 ];
 
 function asText(content?: string | string[]) {
@@ -98,6 +98,313 @@ function staticImageSrc(src?: string) {
   if (!src) return src;
 
   return src.startsWith("/") ? src.split("?")[0] : src;
+}
+
+type LayoutHeadingSlot =
+  | "introTitle"
+  | "trustLabel"
+  | "trustTitle"
+  | "highlightLabel"
+  | "highlightTitle"
+  | "supportLabel"
+  | "supportTitle"
+  | "detailsLabel"
+  | "detailsTitle"
+  | "detailsIntro"
+  | "quoteBadge"
+  | "quoteTitle"
+  | "processLabel"
+  | "processTitle"
+  | "assuranceTitle"
+  | "careLabel"
+  | "careTitle"
+  | "nearbyLabel"
+  | "nearbyTitle"
+  | "ctaLabel";
+
+type LayoutTone = {
+  surface: string;
+  concern: string;
+  material: string;
+  result: string;
+  check: string;
+  activity: string;
+};
+
+function hashText(value: string) {
+  return value.split("").reduce((sum, char, index) => {
+    return (sum + char.charCodeAt(0) * (index + 17)) % 100000;
+  }, 43);
+}
+
+function pick<T>(items: T[], seed: number, offset = 0) {
+  return items[Math.abs(seed + offset * 47) % items.length];
+}
+
+function serviceTone(serviceName: string): LayoutTone {
+  const lower = serviceName.toLowerCase();
+
+  if (lower.includes("artificial grass")) {
+    return {
+      surface: "floor and edge",
+      concern: "drainage, base level, and foot traffic",
+      material: "turf pile and base preparation",
+      result: "a green surface that still feels easy to clean",
+      check: "surface read",
+      activity: "balcony, terrace, or play-area use",
+    };
+  }
+
+  if (lower.includes("sports")) {
+    return {
+      surface: "court and boundary",
+      concern: "ball direction, support spacing, and nearby edges",
+      material: "mesh, rope edge, and fixing support",
+      result: "a play area that feels controlled",
+      check: "impact-direction check",
+      activity: "practice, play, and coaching movement",
+    };
+  }
+
+  if (lower.includes("cloth")) {
+    return {
+      surface: "utility and ceiling",
+      concern: "drying load, reach height, and movement space",
+      material: "hanger hardware and wall or ceiling fixing",
+      result: "a laundry corner that stays easier to use",
+      check: "load and reach check",
+      activity: "daily washing and drying",
+    };
+  }
+
+  if (lower.includes("spikes")) {
+    return {
+      surface: "ledge and perch",
+      concern: "active sitting lines, AC frames, and parapet edges",
+      material: "spike base, fixing method, and ledge width",
+      result: "a perch point that stops inviting repeat use",
+      check: "perch-line check",
+      activity: "ledge cleaning and bird-control upkeep",
+    };
+  }
+
+  if (lower.includes("net")) {
+    return {
+      surface: "opening and duct",
+      concern: "bird routes, pipe gaps, and edge coverage",
+      material: "net material, hook spacing, and fixing line",
+      result: "an opening that is easier to keep clean",
+      check: "entry-route check",
+      activity: "balcony, duct, and utility access",
+    };
+  }
+
+  if (lower.includes("children")) {
+    return {
+      surface: "window and balcony edge",
+      concern: "low sills, furniture reach, and child movement",
+      material: "stainless cable, spacing, and anchor line",
+      result: "a room that keeps air and feels calmer at the edge",
+      check: "family-use check",
+      activity: "daily child movement near openings",
+    };
+  }
+
+  if (lower.includes("window")) {
+    return {
+      surface: "window and frame",
+      concern: "sill depth, curtain movement, and outside ledges",
+      material: "window cable and frame-side anchors",
+      result: "a window that stays bright, open, and better controlled",
+      check: "frame and sill check",
+      activity: "rooms that depend on air and daylight",
+    };
+  }
+
+  return {
+    surface: "balcony and opening",
+    concern: "open edges, side returns, and bird access",
+    material: "stainless cable, tension, and anchor placement",
+    result: "a space that feels safer without losing its view",
+    check: "site-read check",
+    activity: "daily balcony and window use",
+  };
+}
+
+function layoutHeading(
+  slot: LayoutHeadingSlot,
+  serviceName: string,
+  location: string,
+  sourceHeading?: string
+) {
+  const tone = serviceTone(serviceName);
+  const seed = hashText(`${slot}:${serviceName}:${location}:${sourceHeading ?? ""}`);
+  const service = serviceName.toLowerCase();
+
+  const options: Record<LayoutHeadingSlot, string[]> = {
+    introTitle: [
+      `${location} ${tone.surface} work starts with the site`,
+      `How ${serviceName} should fit a ${location} space`,
+      `A ${location} site read before the fitting line`,
+      `${serviceName} planned around real ${tone.activity}`,
+      `What the ${location} opening needs before work starts`,
+      `A calmer ${tone.surface} answer for ${location}`,
+    ],
+    trustLabel: [
+      "Site reading",
+      `${location} notes`,
+      "What matters here",
+      "Practical check",
+      "Before the scope",
+      "Local fitting sense",
+    ],
+    trustTitle: [
+      `${tone.result} after the right ${tone.check}`,
+      `The ${tone.concern} question in ${location}`,
+      `A better fit for ${tone.activity}`,
+      `What changes when the site is read properly`,
+      `${serviceName} with the awkward points included`,
+      `A practical way to handle ${tone.surface} concerns`,
+    ],
+    highlightLabel: [
+      "What we check",
+      "Site details",
+      `${location} fit notes`,
+      "Scope points",
+      "Before fitting",
+      "Material notes",
+    ],
+    highlightTitle: [
+      `${tone.surface} details that matter after fitting`,
+      `Small site choices that change daily use`,
+      `${tone.material} matched to the real surface`,
+      `The checks that make the work feel settled`,
+      `What should be clear before the team starts`,
+      `${location} details that should not be guessed`,
+    ],
+    supportLabel: [
+      "Talk through the site",
+      "Before booking",
+      "Site question",
+      `${location} help`,
+      "Quick site note",
+      "Speak with the team",
+    ],
+    supportTitle: [
+      `Need a site read for ${service} in ${location}?`,
+      `Unsure what your ${tone.surface} needs in ${location}?`,
+      `Want the ${tone.check} explained before booking?`,
+      `Have a ${location} opening that needs a closer look?`,
+      `Comparing the right scope for ${service} in ${location}?`,
+      `Need practical guidance before fitting starts?`,
+    ],
+    detailsLabel: [
+      "Work notes",
+      `${location} scope`,
+      "Fitting details",
+      "Site decisions",
+      "What changes the result",
+      "Practical details",
+    ],
+    detailsTitle: [
+      `${serviceName} choices that should match the site`,
+      `What the installer should read before work`,
+      `Details that keep the space easy to use`,
+      `${tone.material} and ${tone.concern} in one plan`,
+      `The parts of the job that should not feel copied`,
+      `How the work should respond to ${location}`,
+    ],
+    detailsIntro: [
+      `These notes keep the page tied to the actual ${tone.surface}, the way the area is used, and the decisions that affect the finished work.`,
+      `The points below turn the service from a product label into a site-specific scope for ${location}.`,
+      `Each detail should help a customer understand what is being checked, why it matters, and how the result should behave after fitting.`,
+      `This section keeps material, access, finish, and daily use in the same conversation.`,
+      `The useful details are the ones a customer can see or feel after the team leaves.`,
+      `A good ${location} scope should explain the surface, the material, and the small choices that affect daily use.`,
+    ],
+    quoteBadge: [
+      "Quote and site scope",
+      "Before the quote",
+      `${location} quote notes`,
+      "Scope and access",
+      "Price depends on the site",
+      "Measure before deciding",
+    ],
+    quoteTitle: [
+      `Scope, access, and surface decide the final quote`,
+      `${tone.material} should be priced against the actual site`,
+      `A clear quote starts with the parts that need work`,
+      `The cost should follow the opening, not a fixed script`,
+      `What changes the ${location} quote`,
+      `How the site shape affects the installation cost`,
+    ],
+    processLabel: [
+      "Fitting sequence",
+      "Before work starts",
+      "How the site is read",
+      "Installation path",
+      "Work sequence",
+      "From check to fitting",
+    ],
+    processTitle: [
+      `Fixing points, access, and finish checked before the line is set`,
+      `${tone.check} first, material and fitting after that`,
+      `A step-by-step fit around ${tone.activity}`,
+      `How the team moves from site reading to finished work`,
+      `The order that keeps the job practical`,
+      `Surface, access, and alignment before the final fitting`,
+    ],
+    assuranceTitle: [
+      `A result that should feel steady after daily use`,
+      `Work that should settle into the space`,
+      `A finish that should not fight the room`,
+      `Practical hold, clean alignment, and easier use`,
+      `The site should feel calmer after fitting`,
+      `A clean result without making the space feel forced`,
+    ],
+    careLabel: [
+      "Care notes",
+      "After fitting",
+      "Use and upkeep",
+      "Daily care",
+      "Keeping it easy",
+      "Simple checks",
+    ],
+    careTitle: [
+      `${tone.surface} care that keeps the area easy to use`,
+      `Small habits that help the work stay settled`,
+      `After-care for ${tone.activity}`,
+      `How to keep the finished area working well`,
+      `${location} upkeep notes for daily use`,
+      `Care that follows the way the space is used`,
+    ],
+    nearbyLabel: [
+      "Around this part of the city",
+      `${location} surroundings`,
+      "Close-by work",
+      "Around this location",
+      "Neighbouring pages",
+      "Connected areas",
+    ],
+    nearbyTitle: [
+      `Nearby locations connected to ${location}`,
+      `Close-by areas where this service is also handled`,
+      `${serviceName} work around ${location}`,
+      `Other local pages near ${location}`,
+      `Service coverage around ${location}`,
+      `Areas nearby with similar site needs`,
+    ],
+    ctaLabel: [
+      "Site check available",
+      "Ready for a site read",
+      "Before you book",
+      "Ask for a scope check",
+      "Talk through the opening",
+      "Plan the fitting",
+    ],
+  };
+
+  return pick(options[slot], seed, 1);
 }
 
 export default function BrandedServiceLayout({
@@ -180,6 +487,36 @@ export default function BrandedServiceLayout({
   const heroBackgroundImage = staticImageSrc(backgroundImage) ?? backgroundImage;
   const cleanShowcaseImage = staticImageSrc(showcaseImage) ?? showcaseImage;
   const cleanDetailImage = staticImageSrc(detailImage);
+  const introTitle = layoutHeading("introTitle", serviceName, location, introSection?.heading);
+  const trustLabel = layoutHeading("trustLabel", serviceName, location, whySection?.heading);
+  const trustTitle = layoutHeading("trustTitle", serviceName, location, whySection?.heading);
+  const highlightLabel = layoutHeading(
+    "highlightLabel",
+    serviceName,
+    location,
+    listSection?.heading
+  );
+  const highlightTitle = layoutHeading(
+    "highlightTitle",
+    serviceName,
+    location,
+    listSection?.heading
+  );
+  const supportLabel = layoutHeading("supportLabel", serviceName, location);
+  const supportTitle = layoutHeading("supportTitle", serviceName, location);
+  const detailsLabel = layoutHeading("detailsLabel", serviceName, location);
+  const detailsTitle = layoutHeading("detailsTitle", serviceName, location);
+  const detailsIntro = layoutHeading("detailsIntro", serviceName, location);
+  const quoteBadge = layoutHeading("quoteBadge", serviceName, location, priceSection?.heading);
+  const quoteTitle = layoutHeading("quoteTitle", serviceName, location, priceSection?.heading);
+  const processLabel = layoutHeading("processLabel", serviceName, location);
+  const processTitle = layoutHeading("processTitle", serviceName, location);
+  const assuranceTitle = layoutHeading("assuranceTitle", serviceName, location);
+  const careLabel = layoutHeading("careLabel", serviceName, location, tipsSection?.heading);
+  const careTitle = layoutHeading("careTitle", serviceName, location, tipsSection?.heading);
+  const nearbyLabel = layoutHeading("nearbyLabel", serviceName, location, nearbySection?.heading);
+  const nearbyTitle = layoutHeading("nearbyTitle", serviceName, location, nearbySection?.heading);
+  const ctaLabel = layoutHeading("ctaLabel", serviceName, location);
 
   return (
     <main className="min-h-screen bg-[linear-gradient(180deg,#f8fafc_0%,#fff7ed_32%,#ffffff_100%)]">
@@ -241,7 +578,7 @@ export default function BrandedServiceLayout({
 
               <div className="absolute left-4 top-4 right-4 inline-flex w-fit max-w-[calc(100%-2rem)] items-center gap-2 rounded-full border border-white/20 bg-white/15 px-3 py-2 text-xs font-semibold text-white backdrop-blur-md sm:left-5 sm:top-5 sm:px-4 sm:text-sm">
                 <Sparkles size={16} className="text-amber-300" />
-                {showcaseBadge ?? `${serviceName} Experts`}
+                {showcaseBadge ?? `${serviceName} Service`}
               </div>
 
               <div className="absolute bottom-4 left-4 right-4 hidden gap-2 sm:bottom-5 sm:left-5 sm:right-5 sm:grid sm:gap-3 sm:grid-cols-3">
@@ -266,7 +603,7 @@ export default function BrandedServiceLayout({
               </div>
 
               <h2 className="mt-5 text-[1.7rem] font-bold leading-[1.15] text-slate-900 sm:text-3xl">
-                Elegant protection designed for modern homes and apartments
+                {introTitle}
               </h2>
 
               <p className="mt-4 text-[15px] leading-7 text-slate-600 sm:mt-5 sm:text-base sm:leading-8">
@@ -308,19 +645,19 @@ export default function BrandedServiceLayout({
                 <div className="rounded-[24px] border border-orange-100 bg-white/90 p-4 shadow-sm">
                   <Handshake className="h-8 w-8 text-orange-500" />
                   <p className="mt-3 text-sm font-semibold leading-6 text-slate-900">
-                    15,300+ trusted homes protected with premium installation.
+                    Site condition reviewed before final fitting is confirmed.
                   </p>
                 </div>
                 <div className="rounded-[24px] border border-orange-100 bg-white/90 p-4 shadow-sm">
                   <Award className="h-8 w-8 text-orange-500" />
                   <p className="mt-3 text-sm font-semibold leading-6 text-slate-900">
-                    ISO quality standards and durable materials for long-term use.
+                    Material options discussed against exposure and fixing surface.
                   </p>
                 </div>
                 <div className="rounded-[24px] border border-orange-100 bg-white/90 p-4 shadow-sm">
                   <ShieldCheck className="h-8 w-8 text-orange-500" />
                   <p className="mt-3 text-sm font-semibold leading-6 text-slate-900">
-                    Expert fitting for balconies, windows, and high-rise spaces.
+                    Fitting planned around balconies, windows, and high-rise access.
                   </p>
                 </div>
               </div>
@@ -330,7 +667,7 @@ export default function BrandedServiceLayout({
                   href="/contact-us"
                   className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 sm:text-base"
                 >
-                  Get Free Quote
+                  Request Site Quote
                   <ArrowRight size={18} />
                 </a>
                 <a
@@ -371,10 +708,10 @@ export default function BrandedServiceLayout({
           <div className="rounded-[26px] border border-slate-200 bg-white p-5 shadow-sm md:rounded-[30px] md:p-8">
             <div className="inline-flex items-center gap-2 rounded-full bg-orange-50 px-4 py-2 text-xs font-semibold text-orange-600 sm:text-sm">
               <Sparkles size={16} />
-              Why this service works
+              {trustLabel}
             </div>
             <h2 className="mt-4 text-[1.7rem] font-bold leading-[1.15] text-slate-900 sm:text-3xl">
-              Premium safety with a cleaner and more refined finish
+              {trustTitle}
             </h2>
             <p className="mt-4 text-[15px] leading-7 text-slate-600 sm:mt-5 sm:text-base sm:leading-8">
               {asText(whySection?.content ?? introSection?.content)}
@@ -385,7 +722,7 @@ export default function BrandedServiceLayout({
               </p>
             )}
 
-            {benefitItems.length > 0 && (
+            {/* {benefitItems.length > 0 && (
               <div className="mt-8 grid gap-4 md:grid-cols-2">
                 {benefitItems.map((item) => (
                   <div
@@ -399,7 +736,7 @@ export default function BrandedServiceLayout({
                   </div>
                 ))}
               </div>
-            )}
+            )} */}
           </div>
 
           <div className="space-y-6">
@@ -409,10 +746,10 @@ export default function BrandedServiceLayout({
                   <Building2 className="h-10 w-10 rounded-2xl bg-slate-900 p-2 text-white" />
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-500 sm:text-sm">
-                      Service Highlights
+                      {highlightLabel}
                     </p>
                     <h3 className="text-xl font-bold leading-tight text-slate-900 sm:text-2xl">
-                      Best suited for modern apartments and home spaces
+                      {highlightTitle}
                     </h3>
                   </div>
                 </div>
@@ -432,14 +769,14 @@ export default function BrandedServiceLayout({
 
             <div className="rounded-[26px] border border-slate-200 bg-slate-900 p-5 text-white shadow-[0_18px_50px_rgba(15,23,42,0.28)] md:rounded-[30px] md:p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-200 sm:text-sm">
-                Quick Support
+                {supportLabel}
               </p>
               <h3 className="mt-3 text-xl font-bold leading-tight sm:text-2xl">
-                Need advice for {serviceName.toLowerCase()} in {location}?
+                {supportTitle}
               </h3>
               <p className="mt-4 text-sm leading-7 text-slate-300">
                 Speak with our team for site guidance, product suggestions, and a
-                free quote for your balcony, window, or outdoor installation.
+                site quote for your balcony, window, or outdoor installation.
               </p>
 
               <div className="mt-6 space-y-3">
@@ -470,15 +807,14 @@ export default function BrandedServiceLayout({
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange-500 sm:text-sm">
-                  Service Details
+                  {detailsLabel}
                 </p>
                 <h2 className="mt-3 text-[1.7rem] font-bold leading-[1.15] text-slate-900 sm:text-3xl">
-                  Designed to look refined while delivering strong everyday protection
+                  {detailsTitle}
                 </h2>
               </div>
               <p className="max-w-2xl text-sm leading-7 text-slate-600">
-                Explore the main design, installation, safety, and performance
-                details for this service.
+                {detailsIntro}
               </p>
             </div>
 
@@ -534,7 +870,7 @@ export default function BrandedServiceLayout({
                   <div className="absolute bottom-5 left-5 right-5">
                     <div className="inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-xs font-semibold text-slate-900 sm:text-sm">
                       <Award size={16} className="text-orange-500" />
-                      Pricing and installation guidance
+                      {quoteBadge}
                     </div>
                   </div>
                 </div>
@@ -542,7 +878,7 @@ export default function BrandedServiceLayout({
 
               <div className="p-5 md:p-6">
                 <h2 className="text-xl font-bold leading-tight text-slate-900 sm:text-2xl">
-                  Installation support tailored to your layout and safety needs
+                  {quoteTitle}
                 </h2>
 
                 <div className="mt-6 space-y-3">
@@ -560,16 +896,16 @@ export default function BrandedServiceLayout({
 
             <div className="rounded-[26px] border border-slate-200 bg-white p-5 shadow-sm md:rounded-[32px] md:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange-500 sm:text-sm">
-                Installation Process
+                {processLabel}
               </p>
               <h2 className="mt-3 text-[1.7rem] font-bold leading-[1.15] text-slate-900 sm:text-3xl">
-                Professional installation with neat finishing and secure fitting
+                {processTitle}
               </h2>
 
               <div className="mt-6 space-y-4 sm:mt-8 sm:space-y-5">
                 {asList(
                   sections.find((section) =>
-                    includesAny(section, ["install", "process", "how we", "professional"])
+                    includesAny(section, ["install", "process", "how we", "careful"])
                   )?.content ?? introSection?.content
                 )
                   .slice(0, 6)
@@ -590,11 +926,11 @@ export default function BrandedServiceLayout({
                   <ShieldCheck className="mt-1 h-6 w-6 text-green-600" />
                   <div>
                     <h3 className="text-lg font-bold text-slate-900">
-                      Clean finish, strong hold, and minimal visual obstruction
+                      {assuranceTitle}
                     </h3>
                     <p className="mt-2 text-sm leading-7 text-slate-700">
                       Every installation is planned to preserve openness, airflow,
-                      and the premium look of the property while improving safety.
+                      and the clean look of the property while improving safety.
                     </p>
                   </div>
                 </div>
@@ -610,10 +946,10 @@ export default function BrandedServiceLayout({
             {tipsSection && (
               <div className="rounded-[26px] border border-slate-200 bg-white p-5 shadow-sm md:rounded-[30px] md:p-8">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-500 sm:text-sm">
-                  Care Tips
+                  {careLabel}
                 </p>
                 <h2 className="mt-3 text-[1.7rem] font-bold leading-[1.15] text-slate-900 sm:text-3xl">
-                  Smart maintenance and care for long-term performance
+                  {careTitle}
                 </h2>
 
                 <div className="mt-6 space-y-4">
@@ -638,10 +974,10 @@ export default function BrandedServiceLayout({
                   <MapPin className="h-10 w-10 rounded-2xl bg-slate-900 p-2 text-white" />
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-500 sm:text-sm">
-                      Nearby Areas
+                      {nearbyLabel}
                     </p>
                     <h2 className="text-[1.7rem] font-bold leading-[1.15] text-slate-900 sm:text-3xl">
-                      Also serving nearby locations around {location}
+                      {nearbyTitle}
                     </h2>
                   </div>
                 </div>
@@ -678,7 +1014,7 @@ export default function BrandedServiceLayout({
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange-200 sm:text-sm">
-                Free Site Visit Available
+                {ctaLabel}
               </p>
               <h2 className="mt-4 text-[1.9rem] font-bold leading-tight md:text-4xl">
                 {ctaTitle}
@@ -693,7 +1029,7 @@ export default function BrandedServiceLayout({
                 href="/contact-us"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-orange-50 sm:text-base"
               >
-                Get Free Quote
+                Request Site Quote
                 <ArrowRight size={18} />
               </a>
               <a

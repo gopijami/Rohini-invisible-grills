@@ -164,7 +164,7 @@ export default function ContactForm(){
     {/* LEFT SIDE: Heading Text */}
     <div className="text-center md:text-left flex-1">
       <h2 className="text-4xl sm:text-6xl font-extrabold bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent drop-shadow-2xl">
-        Premium Invisible Grills
+        Well-finished Invisible Grills
       </h2>
       <p className="mt-4 text-white text-lg sm:text-2xl font-medium drop-shadow-md max-w-lg">
         Warranty Support • 304 Grade SS Wire • Child & Bird Safety
@@ -203,7 +203,7 @@ export default function ContactForm(){
           bg-clip-text text-transparent
         "
         >
-          Get a Free Quote
+          Get a Site Quote
         </h3>
 
         <form

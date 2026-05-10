@@ -67,8 +67,8 @@ function truncateAtWord(text: string, maxLength: number) {
 export function optimizedServiceMetaTitle(serviceName: string, location: string) {
   const service = compactServiceName(serviceName);
   const titleOptions = [
-    `${service} in ${location} | Safety & Bird Control`,
-    `${service} in ${location} | Free Site Visit`,
+    `${service} in ${location} | Site Check`,
+    `${service} in ${location} | Measured Fit`,
     `${service} in ${location} | Rohini`,
   ];
 
@@ -128,7 +128,7 @@ export function compactServiceTitle(serviceName: string, location: string) {
 export function compactServiceDescription(serviceName: string, location: string) {
   const service = compactServiceName(serviceName);
   const buildDescription = (place: string) =>
-    `${service} in ${place} by Rohini. Free site visit, neat fitting, durable materials, clear pricing, and local installation support.`;
+    `${service} in ${place} by Rohini. Site check, neat fitting, material guidance, clear scope, and local installation support.`;
   const description = buildDescription(location);
 
   if (description.length <= 175) return description;
@@ -271,7 +271,7 @@ export function createGrillSeed(str: string): number {
 
 export const locationImagesForBalconySafetyInvisibleGrills = [
   "/images/balcony-invisible-grills-in-hyderabad.webp",
-  "/images/drybalcony-invisible-grills-near-me.webp",
+  "/images/dry-balcony-invisible-grills.webp",
   "/images/invisible-grills-in-hyderabad.webp",
   "/images/pigeon-safety-invisible-grills.webp",
 ];
@@ -296,7 +296,7 @@ export const separator = (service: string): string => {
 //anti bird invisible grills
 
 export const locationImagesForAntiBirdInvisibleGrills = [
-"/images/drybalcony-invisible-grills-near-me.webp",
+"/images/dry-balcony-invisible-grills.webp",
   "/images/balcony-invisible-grills-in-hyderabad.webp",
   "/images/invisible-grills-in-hyderabad.webp",
   "/images/anti-bird-invisible-grills.webp",
@@ -312,8 +312,8 @@ export const BalconySafetyAntiBirdInvisibleGrills = [
 //Sports nets installation
 
 export const locationImagesForSportsNets = [
-"/images/Box-cricket-practice-net-installation-near-me.webp",
-  "/images/Box-cricket-practice-net-installation-near-me.webp",
+"/images/box-cricket-practice-net-installation.webp",
+  "/images/box-cricket-practice-net-installation.webp",
   "/images/sport-nets-installation-hyderabad.webp",
   "/images/sports-nets-installation-for-cricket-and-football-practice.webp",
 ];
@@ -321,8 +321,8 @@ export const locationImagesForSportsNets = [
 export const BalconySafetySportsNets = [
      "/images/sports-nets-installation-for-cricket-and-football-practice.webp",
   "/images/sport-nets-installation-hyderabad.webp",
-  "/images/Box-cricket-practice-net-installation-near-me.webp",
-"/images/Box-cricket-practice-net-installation-near-me.webp",
+  "/images/box-cricket-practice-net-installation.webp",
+"/images/box-cricket-practice-net-installation.webp",
 ];
 
 
@@ -332,7 +332,7 @@ export const BalconySafetySportsNets = [
 export const locationImagesForWindowsInvisibleGrills = [
 "/images/window-anti-bird-invisible-grills.webp",
   "/images/window-invisible-grills-Hyderabad.webp",
-  "/images/invisible-grills-for-window-near-me.webp",
+  "/images/invisible-grills-for-window.webp",
   "/images/invisible-grills-bird-netting-in-hyderabad.webp",
 ];
 
@@ -340,7 +340,7 @@ export const BalconySafetyWindowsInvisibleGrills = [
   "/images/invisible-grills-bird-netting-in-hyderabad.webp",
   "/images/window-invisible-grills-Hyderabad.webp",
   "/images/window-anti-bird-invisible-grills.webp",
-  "/images/invisible-grills-for-window-near-me.webp",
+  "/images/invisible-grills-for-window.webp",
 ];
 
 
@@ -352,8 +352,8 @@ export const BalconySafetyWindowsInvisibleGrills = [
 export const locationImagesForChildrenSafetyInvisibleGrills = [
 "/images/children-safety-invisible-grills-for-balcony.webp",
   "/images/children-safety-invisible-grills-in-hyderabad.webp",
-  "/images/invisible-grills-for-window-near-me.webp",
-  "/images/apartment-balcony-invisible-grills-near-me-in-hyderabad.webp",
+  "/images/invisible-grills-for-window.webp",
+  "/images/apartment-balcony-invisible-grills-hyderabad.webp",
 ];
 
 export const BalconySafetyChildrenSafetyInvisibleGrills = [
@@ -367,68 +367,68 @@ export const BalconySafetyChildrenSafetyInvisibleGrills = [
 //bird spikes installation
 
 export const locationImagesForBirdSpikesInstallation = [
-   "/spikes/anti-bird-spikes-installation-near-me.webp",
+   "/spikes/anti-bird-spikes-installation.webp",
     "/spikes/bird-control-spikes.webp",
     "/spikes/bird-control-spikes.webp",
-    "/spikes/pigeon-bird-spikes-installation-near-me.webp",
+    "/spikes/pigeon-bird-spikes-installation.webp",
     "/spikes/pvc-anti-bird-spikes-installation.webp",
-    "/spikes/same-day-bird-spikes-installation-near-me.webp",
-    "/spikes/top-rated-bird-spikes-installation-near-me.webp",
+    "/spikes/bird-spikes-site-installation.webp",
+    "/spikes/bird-spikes-installation-service.webp",
 ];
 
 export const BalconySafetyBirdSpikesInstallation = [
-  "/spikes/cards/top-rated-bird-control-spikes-installation.webp",
-  "/spikes/cards/same-day-bird-spikes-installation.webp",
-  "/spikes/cards/bird-spikes-installation-near-me.webp",
-  "/spikes/cards/pvc-bird-control-spikes-installation-near-me.webp",
+  "/spikes/cards/bird-control-spikes-installation.webp",
+  "/spikes/cards/bird-spikes-installation.webp",
+  "/spikes/cards/bird-spikes-installation.webp",
+  "/spikes/cards/pvc-bird-control-spikes-installation.webp",
   "/spikes/cards/pigeon-bird-spikes-installation.webp",
-  "/spikes/cards/bird-spikes-installation-near-me.webp",
+  "/spikes/cards/bird-spikes-installation.webp",
   "/spikes/cards/anti-bird-spikes-installation.webp",
 
 ]
 
 export const locationImagesForClothHangers = [
-  "/clothhangers/best-cloth-hangers-near-me.webp",
-  "/clothhangers/ceiling-cloth-hangers-near-me.webp",
-  "/clothhangers/ceiling-balcony-cloth-hangers-near-me.webp",
-  "/clothhangers/dry-balcony-cloth-hangers-near-me.webp",
+    "/clothhangers/cloth-hanger-installation.webp",
+  "/clothhangers/ceiling-cloth-hangers.webp",
+  "/clothhangers/ceiling-balcony-cloth-hangers.webp",
+  "/clothhangers/dry-balcony-cloth-hangers.webp",
   "/clothhangers/dry-balcony-cloth-hangers-installation.webp",
-  "/clothhangers/top-rated-cloth-hangers-installation-near-me.webp"
+  "/clothhangers/cloth-hangers-installation.webp"
 ];
 
 export const balconyClothHangerImages = [
-  "/clothhangers/top-rated-cloth-hangers-installation-near-me.webp",
+  "/clothhangers/cloth-hangers-installation.webp",
   "/clothhangers/cards/ceiling-balcony-cloth-hangers.webp",
   "/clothhangers/cards/ceiling-cloth-hangers.webp",
-  "/clothhangers/best-cloth-hangers-near-me.webp",
+  "/clothhangers/cloth-hanger-installation.webp",
   "/clothhangers/dry-balcony-cloth-hangers-installation.webp",
   "/clothhangers/cards/dry-balcony-cloth-hangers.webp",
 
 ]
 
 export const locationImagesForArtificialGrass = [
-  "/artificialturf/artificial-grass-for-ramp-near-me-installation.webp",
-  "/artificialturf/ground-top-rated-artificial-turf-installation.webp",
-  "/artificialturf/artificial-turf-installation-for-ground-near-me.webp",
-  "/artificialturf/complete-artificial-turf-installation-for-national-ground-near-me.webp",
-  "/artificialturf/complete-artificial-turf-installation-for-national-ground-near-me.webp",
+  "/artificialturf/artificial-grass-for-ramp-installation.webp",
+  "/artificialturf/ground-artificial-turf-installation.webp",
+  "/artificialturf/artificial-turf-installation-for-ground.webp",
+  "/artificialturf/artificial-turf-installation-for-national-ground.webp",
+  "/artificialturf/artificial-turf-installation-for-national-ground.webp",
     "/artificialturf/artificial-turf-grass-installation-for-garden.webp",
   "/artificialturf/artificial-turf-grass-material-properties.webp"
 ]
 
 export const artificialGrassProductImages= [
-  "/artificialturf/ground-top-rated-artificial-turf-installation.webp",
+  "/artificialturf/ground-artificial-turf-installation.webp",
   "/artificialturf/cards/artificial-turf-for-garden.webp",
   "/artificialturf/cards/artificial-grass-for-ramp.webp",
-  "/artificialturf/artificial-turf-installation-for-ground-near-me.webp",
-  "/artificialturf/complete-artificial-turf-installation-for-national-ground-near-me.webp",
+  "/artificialturf/artificial-turf-installation-for-ground.webp",
+  "/artificialturf/artificial-turf-installation-for-national-ground.webp",
     "/artificialturf/cards/artificial-grass-material-properties.webp",
-  "/artificialturf/ground-top-rated-artificial-turf-installation.webp"
+  "/artificialturf/ground-artificial-turf-installation.webp"
 
 ]
 export const locationImagesForAntiBirdNetInstallation = [
   "/birdnet/anti-bird-nets-installation.webp",
-  "/birdnet/cards/balcony-safety-nets-near-me.webp",
+  "/birdnet/cards/balcony-safety-nets.webp",
   "/birdnet/monkey-safety-nets.webp",
   "/birdnet/window-safety-nets-installation.webp",
   "/birdnet/window-safety-nets-installation.webp",
@@ -438,7 +438,7 @@ export const locationImagesForAntiBirdNetInstallation = [
 
 export const BalconySafetyAntiBirdNetInstallation = [
   "/birdnet/cards/anti-bird-net.webp",
-  "/birdnet/cards/balcony-safety-nets-near-me.webp",
+  "/birdnet/cards/balcony-safety-nets.webp",
   "/birdnet/cards/window-safety-nets.webp",
   "/birdnet/cards/window-safety-nets.webp",
   "/birdnet/monkey-safety-nets.webp",

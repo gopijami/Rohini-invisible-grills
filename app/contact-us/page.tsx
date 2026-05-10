@@ -4,7 +4,7 @@ import { localBusinessSchema } from "../components/schema/localBusiness";
 import { organizationSchema } from "../components/schema/organization";
 
 const url = "https://rohiniinvisiblegrills.com/contact-us";
-const title = "Contact Rohini Invisible Grills | Free Site Visit";
+const title = "Contact Rohini Invisible Grills | Site Check";
 const description =
   "Contact Rohini Invisible Grills for invisible grill installation, bird nets, balcony safety systems, and Bachupally branch service enquiries.";
 
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   keywords: [
     "contact Rohini Invisible Grills",
-    "invisible grills free site visit",
+    "invisible grills site check",
     "Bachupally invisible grills branch",
     "balcony safety grills Hyderabad contact",
     "bird net installation Hyderabad contact",

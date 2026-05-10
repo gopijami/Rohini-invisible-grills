@@ -13,7 +13,7 @@ export const webpageSchema = (
   
   url,
   name: `${serviceName} in ${location}`,
-  description: `Professional ${serviceName} in ${location}. Expert installation for balcony safety, bird & pigeon prevention, and home protection. Trusted, durable, and high-quality services to secure your property.`,
+  description: `Site-measured ${serviceName} in ${location} for balcony safety, bird-entry reduction, and home protection. The page explains scope, fitting approach, and local service context.`,
 
   inLanguage: "en-IN",
   isPartOf: {
@@ -36,9 +36,6 @@ export const webpageSchema = (
     "@type": "Organization",
     name: "Rohini Invisible Grills"
   },
-
-  datePublished: new Date().toISOString().split("T")[0],
-  dateModified: new Date().toISOString().split("T")[0],
 
   breadcrumb: {
   "@type": "BreadcrumbList",

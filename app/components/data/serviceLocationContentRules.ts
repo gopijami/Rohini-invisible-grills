@@ -12,7 +12,7 @@ export const SERVICE_LOCATION_CONTENT_HARD_RULES = {
   writing: {
     uniqueContentPerLocation: true,
     uniquePatternPerLocation: true,
-    ultraEliteQualityBar: true,
+    highFinishQualityBar: true,
     localGroundingRequired: true,
     noAreaNameSwapWriting: true,
     noThinFiller: true,
@@ -49,7 +49,7 @@ export const SERVICE_LOCATION_CONTENT_HARD_RULES = {
     perLocationGuidance: [
       "At least one section should open with a lived case or installation situation.",
       "At least one section should foreground a failed earlier fix or common buyer mistake.",
-      "At least one section should use contrast: cheap vs premium, front-only vs route-aware, before vs after.",
+      "At least one section should use contrast: cheap vs well-finished, front-only vs route-aware, before vs after.",
       "Do not let every page use the same section rhythm even if the section headings remain structurally similar.",
     ],
   },
@@ -65,7 +65,7 @@ export const SERVICE_LOCATION_CONTENT_HARD_RULES = {
     includeMissedRouteCorrectionLine: true,
   },
   seo: {
-    intentsRequired: [
+    buyerQuestionsRequired: [
       "commercial",
       "transactional",
       "informational",
@@ -73,7 +73,7 @@ export const SERVICE_LOCATION_CONTENT_HARD_RULES = {
       "problem-solution",
       "hyperlocal",
     ],
-    keywordsMustBeNatural: true,
+    phrasesMustBeNatural: true,
     eachLocationNeedsOwnKeywordMix: true,
   },
 } as const;
@@ -88,7 +88,7 @@ export const SERVICE_LOCATION_SECTION_FLOW_ROTATION = [
       "failed-fix-analysis",
       "layout-variation",
       "before-after-shift",
-      "premium-positioning",
+      "well-finished-positioning",
     ],
   },
   {
@@ -100,19 +100,19 @@ export const SERVICE_LOCATION_SECTION_FLOW_ROTATION = [
       "local-case-story",
       "layout-variation",
       "before-after-shift",
-      "premium-positioning",
+      "well-finished-positioning",
     ],
   },
   {
     name: "contrast-first",
     openingOrder: [
-      "cheap-vs-premium-contrast",
+      "cheap-vs-well-finished-contrast",
       "real-problem-context",
       "local-case-story",
       "bird-route-behaviour",
       "layout-variation",
       "before-after-shift",
-      "premium-positioning",
+      "well-finished-positioning",
     ],
   },
   {
@@ -124,7 +124,7 @@ export const SERVICE_LOCATION_SECTION_FLOW_ROTATION = [
       "failed-fix-analysis",
       "layout-variation",
       "before-after-shift",
-      "premium-positioning",
+      "well-finished-positioning",
     ],
   },
 ] as const;

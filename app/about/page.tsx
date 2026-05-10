@@ -9,8 +9,8 @@ export async function generateMetadata(): Promise<Metadata> {
     description:
       "Learn about Rohini Invisible Grills, Hyderabad installers for invisible grills, balcony safety grills, bird protection, sports nets, and child-safe windows.",
     keywords: [
-      "invisible grills near me",
-      "best invisible grills",
+      "invisible grill installers Hyderabad",
+      "invisible grill installers",
       "balcony safety grills",
       "anti bird grills",
       "children safety grills",
@@ -67,80 +67,10 @@ export default function AboutPage() {
       "areaServed": "India",
       "url": "https://rohiniinvisiblegrills.com/about",
       "description":
-        "Rohini Invisible Grills provides best invisible grill installation, balcony safety grills, anti bird grills, and sports nets services.",
+        "Rohini Invisible Grills provides site-measured invisible grill installation, balcony safety grills, anti bird grills, and sports nets services.",
       "sameAs": socialProfileUrls,
-      "priceRange": "INR",
+      "priceRange": "Site-measured quote",
       "openingHours": "Mo-Su 08:00-20:00"
-    }),
-  }}
-/>
-
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Invisible Grill Installation",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Rohini Invisible Grills"
-      },
-      "areaServed": {
-        "@type": "Place",
-        "name": "India"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Invisible Grill Services",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Balcony Safety Invisible Grills" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Anti Bird Invisible Grills" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Children Safety Invisible Grills" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Windows Invisible Grills" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sports Nets Installation" } }
-        ]
-      }
-    }),
-  }}
-/>
-
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What are invisible grills?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Invisible grills are stainless steel wire systems used for safety without blocking the view."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do invisible grills stop pigeons?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, invisible grills act as a strong barrier to prevent pigeons and birds."
-          }
-        }
-      ]
-    }),
-  }}
-/>
-
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "GeoCoordinates",
-      "latitude": "17.3850",
-      "longitude": "78.4867"
     }),
   }}
 />
